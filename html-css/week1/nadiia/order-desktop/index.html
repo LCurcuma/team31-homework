@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Payment page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Order summary</h1>
+      <p class="Total">Total<span>$333/month</span></p>
+      <hr />
+      <p class="Total_2">Total<span>$100</span></p>
+    </header>
+    <main>
+      <form action="" method="get">
+        <fieldset>
+          <legend>Payment Method</legend>
+          <div class="buttons">
+            <button name="payment_method" value="credit">
+              <div class="images">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png"
+                  class="button_image"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg"
+                  class="button_image"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Danske_Bank_logo.svg/2560px-Danske_Bank_logo.svg.png"
+                  class="button_image"
+                />
+              </div>
+              Credit/Debit
+            </button>
+            <button name="payment_method" value="paypal">
+              <img
+                src="https://www.advancedisco.co.uk/news/wp-content/uploads/2023/12/Paypal_2014_logo.png"
+              />
+              PayPal
+            </button>
+          </div>
+        </fieldset>
+        <fieldset class="card_info">
+          <legend>Card Info</legend>
+          <div class="container">
+            <label for="card_number" class="w_tip">Card Number</label>
+            <div class="with_tip">
+              <input
+                name="card_number"
+                type="number"
+                placeholder="1234 1234 1234 1234"
+                class="card_number"
+              /><img
+                src="https://pngimg.com/d/question_mark_PNG53.png"
+                title="You should write full card-number"
+                class="tip"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <label for="expiry_date">Expiry Date</label>
+            <input
+              name="expiry_date"
+              type="number"
+              placeholder="MM/YY"
+              class="expiry_date"
+            />
+          </div>
+          <div class="container">
+            <label for="security_code" class="w_tip">Security Code</label>
+            <div class="with_tip">
+              <input
+                name="security_code"
+                type="number"
+                placeholder="CVV"
+                class="security_code"
+              /><img
+                src="https://pngimg.com/d/question_mark_PNG53.png"
+                title="CVV number is the three numbers on the another side of credit-card"
+                class="tip"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" value="Buy Now" class="submit" />
+      </form>
+      <a href="">Need Help?</a>
+    </main>
+  </body>
+</html>
