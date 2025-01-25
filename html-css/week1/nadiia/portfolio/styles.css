@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+}
+html{
+  scroll-behavior: smooth;
 }
 @font-face {
   font-family: main_font;
@@ -11,28 +15,35 @@
 body {
   font-family: main_font, sans-serif;
   overflow-x: hidden;
+  text-align: center;
+}
+p, .projects_item-label{
+  margin-top: 50%;
+}
+p, .regular-text{
+  margin: 0%;
 }
 nav {
-  display: flex;
   position: fixed;
   width: 100%;
   background-color: #252020;
-  justify-content: flex-end;
-  gap: 20px;
-  padding-right: 20px;
   z-index: 6;
 }
-nav > a {
+.main-nav_link{
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+li > a {
   position: relative;
   text-decoration: none;
   color: #fbf5e5;
-  font-size: 20pt;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 15px;
-  margin-left: 10px;
+  font-size: 26.6px;
 }
-nav > a::after {
+li > a::after {
   content: "";
   position: absolute;
   height: 2.5px;
@@ -42,7 +53,7 @@ nav > a::after {
   background: #fbf5e5;
   transition: width 0.2s;
 }
-nav > a:hover::after {
+li > a:hover::after {
   width: 110%;
 }
 header {
@@ -102,7 +113,7 @@ header {
 .a1 {
   top: 535.85px;
   left: 503.4px;
-  animation-name: a1flying;
+  animation-name: a1_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -110,7 +121,7 @@ header {
 .a2 {
   top: 557px;
   left: 738.94px;
-  animation-name: a2flying;
+  animation-name: a2_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -118,7 +129,7 @@ header {
 .a3 {
   top: -22.65px;
   left: 249.29px;
-  animation-name: a3flying;
+  animation-name: a3_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -126,7 +137,7 @@ header {
 .a4 {
   top: 26.35px;
   left: 94.58px;
-  animation-name: a4flying;
+  animation-name: a4_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -134,7 +145,7 @@ header {
 .a5 {
   top: 67.85px;
   left: 144.35px;
-  animation-name: a5flying;
+  animation-name: a5_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -142,7 +153,7 @@ header {
 .a6 {
   top: -105.65px;
   left: 167.7px;
-  animation-name: a6flying;
+  animation-name: a6_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -150,7 +161,7 @@ header {
 .a7 {
   top: -69.65px;
   left: 98.87px;
-  animation-name: a7flying;
+  animation-name: a7_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -158,7 +169,7 @@ header {
 .a8 {
   top: -90.15px;
   left: 35.93px;
-  animation-name: a8flying;
+  animation-name: a8_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -166,7 +177,7 @@ header {
 .a9 {
   top: -29.15px;
   left: 10.64px;
-  animation-name: a9flying;
+  animation-name: a9_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -174,7 +185,7 @@ header {
 .a10 {
   top: -98px;
   left: 293.05px;
-  animation-name: a10flying;
+  animation-name: a10_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -182,7 +193,7 @@ header {
 .a11 {
   top: -125.9px;
   left: 1072.34px;
-  animation-name: a11flying;
+  animation-name: a11_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -190,7 +201,7 @@ header {
 .a12 {
   top: -192.15px;
   left: 877.2px;
-  animation-name: a12flying;
+  animation-name: a12_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -198,7 +209,7 @@ header {
 .a13 {
   top: 22.85px;
   left: 977.11px;
-  animation-name: a13flying;
+  animation-name: a13_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -206,7 +217,7 @@ header {
 .a14 {
   top: -4.15px;
   left: 666.64px;
-  animation-name: a14flying;
+  animation-name: a14_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -214,7 +225,7 @@ header {
 .a15 {
   top: 424.7px;
   left: 1048.87px;
-  animation-name: a15flying;
+  animation-name: a15_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -222,7 +233,7 @@ header {
 .a16 {
   top: 164.85px;
   left: 1118.99px;
-  animation-name: a16flying;
+  animation-name: a16_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -230,7 +241,7 @@ header {
 .a17 {
   top: -101.15px;
   left: 643.76px;
-  animation-name: a17flying;
+  animation-name: a17_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -238,7 +249,7 @@ header {
 .a18 {
   top: -44.65px;
   left: 784.76px;
-  animation-name: a18flying;
+  animation-name: a18_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -246,7 +257,7 @@ header {
 .a19 {
   top: 87.85px;
   left: 980.05px;
-  animation-name: a19flying;
+  animation-name: a19_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -254,7 +265,7 @@ header {
 .a20 {
   top: 40.85px;
   left: 878.29px;
-  animation-name: a20flying;
+  animation-name: a20_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -262,7 +273,7 @@ header {
 .a21 {
   top: -30.5px;
   left: 867.11px;
-  animation-name: a21flying;
+  animation-name: a21_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -270,7 +281,7 @@ header {
 .a22 {
   top: -101.15px;
   left: 608.85px;
-  animation-name: a22flying;
+  animation-name: a22_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -278,7 +289,7 @@ header {
 .a23 {
   top: 80.85px;
   left: 904.35px;
-  animation-name: a23flying;
+  animation-name: a23_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -286,7 +297,7 @@ header {
 .a24 {
   top: -30.15px;
   left: 922.4px;
-  animation-name: a24flying;
+  animation-name: a24_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -294,7 +305,7 @@ header {
 .a25 {
   top: -75.15px;
   left: 549.29px;
-  animation-name: a25flying;
+  animation-name: a25_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -302,7 +313,7 @@ header {
 .a26 {
   top: 338.2px;
   left: -382.94px;
-  animation-name: a26flying;
+  animation-name: a26_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -310,7 +321,7 @@ header {
 .a27 {
   top: 459.85px;
   left: -132.35px;
-  animation-name: a27flying;
+  animation-name: a27_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -318,7 +329,7 @@ header {
 .a28 {
   top: 410.85px;
   left: 33.58px;
-  animation-name: a28flying;
+  animation-name: a28_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -326,7 +337,7 @@ header {
 .a29 {
   top: 389.85px;
   left: 396.05px;
-  animation-name: a29flying;
+  animation-name: a29_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -334,7 +345,7 @@ header {
 .a30 {
   top: 293.7px;
   left: 46.52px;
-  animation-name: a30flying;
+  animation-name: a30_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -342,7 +353,7 @@ header {
 .a31 {
   top: 320.85px;
   left: -56.29px;
-  animation-name: a31flying;
+  animation-name: a31_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -350,7 +361,7 @@ header {
 .a32 {
   top: 534.85px;
   left: 365.93px;
-  animation-name: a32flying;
+  animation-name: a32_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -358,7 +369,7 @@ header {
 .a33 {
   top: 478.35px;
   left: 225.93px;
-  animation-name: a33flying;
+  animation-name: a33_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -366,7 +377,7 @@ header {
 .a34 {
   top: 522.35px;
   left: 1023.4px;
-  animation-name: a34flying;
+  animation-name: a34_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -374,7 +385,7 @@ header {
 .a35 {
   top: 473.35px;
   left: 1178.11px;
-  animation-name: a35flying;
+  animation-name: a35_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -382,7 +393,7 @@ header {
 .a36 {
   top: 447.85px;
   left: 1244.35px;
-  animation-name: a36flying;
+  animation-name: a36_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -390,7 +401,7 @@ header {
 .a37 {
   top: 523.35px;
   left: 1122.99px;
-  animation-name: a37flying;
+  animation-name: a37_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -398,7 +409,7 @@ header {
 .a38 {
   top: 487.35px;
   left: 1191.82px;
-  animation-name: a38flying;
+  animation-name: a38_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -406,7 +417,7 @@ header {
 .a39 {
   top: 507.85px;
   left: 1254.76px;
-  animation-name: a39flying;
+  animation-name: a39_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -414,7 +425,7 @@ header {
 .a40 {
   top: 446.85px;
   left: 1280.05px;
-  animation-name: a40flying;
+  animation-name: a40_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -422,7 +433,7 @@ header {
 .a41 {
   top: 345.85px;
   left: 30.64px;
-  animation-name: a41flying;
+  animation-name: a41_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -430,7 +441,7 @@ header {
 .a42 {
   top: 392.85px;
   left: 132.4px;
-  animation-name: a42flying;
+  animation-name: a42_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -438,7 +449,7 @@ header {
 .a43 {
   top: 479.5px;
   left: 158.88px;
-  animation-name: a43flying;
+  animation-name: a43_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -446,7 +457,7 @@ header {
 .a44 {
   top: 532.85px;
   left: 282.99px;
-  animation-name: a44flying;
+  animation-name: a44_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -454,7 +465,7 @@ header {
 .a45 {
   top: 352.85px;
   left: -64.65px;
-  animation-name: a45flying;
+  animation-name: a45_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -462,12 +473,12 @@ header {
 .a46 {
   top: 483.85px;
   left: 108.29px;
-  animation-name: a46flying;
+  animation-name: a46_flying;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-@keyframes a1flying {
+@keyframes a1_flying {
   0% {
     top: 535.85px;
   }
@@ -478,7 +489,7 @@ header {
     top: 535.85px;
   }
 }
-@keyframes a2flying {
+@keyframes a2_flying {
   0% {
     top: 557px;
   }
@@ -489,7 +500,7 @@ header {
     top: 557px;
   }
 }
-@keyframes a3flying {
+@keyframes a3_flying {
   0% {
     top: -22.65px;
   }
@@ -500,7 +511,7 @@ header {
     top: -22.65px;
   }
 }
-@keyframes a4flying {
+@keyframes a4_flying {
   0% {
     top: 26.35px;
   }
@@ -511,7 +522,7 @@ header {
     top: 26.35px;
   }
 }
-@keyframes a5flying {
+@keyframes a5_flying {
   0% {
     top: 67.85px;
   }
@@ -522,7 +533,7 @@ header {
     top: 67.85px;
   }
 }
-@keyframes a6flying {
+@keyframes a6_flying {
   0% {
     top: -105.65px;
   }
@@ -533,7 +544,7 @@ header {
     top: -105.65px;
   }
 }
-@keyframes a7flying {
+@keyframes a7_flying {
   0% {
     top: -69.65px;
   }
@@ -544,7 +555,7 @@ header {
     top: -69.65px;
   }
 }
-@keyframes a8flying {
+@keyframes a8_flying {
   0% {
     top: -90.15px;
   }
@@ -555,7 +566,7 @@ header {
     top: -90.15px;
   }
 }
-@keyframes a9flying {
+@keyframes a9_flying {
   0% {
     top: -29.15px;
   }
@@ -566,7 +577,7 @@ header {
     top: -29.15px;
   }
 }
-@keyframes a10flying {
+@keyframes a10_flying {
   0% {
     top: -98px;
   }
@@ -577,7 +588,7 @@ header {
     top: -98px;
   }
 }
-@keyframes a11flying {
+@keyframes a11_flying {
   0% {
     top: -125.9px;
   }
@@ -588,7 +599,7 @@ header {
     top: -125.9px;
   }
 }
-@keyframes a12flying {
+@keyframes a12_flying {
   0% {
     top: -192.15px;
   }
@@ -599,7 +610,7 @@ header {
     top: -192.15px;
   }
 }
-@keyframes a13flying {
+@keyframes a13_flying {
   0% {
     top: 22.85px;
   }
@@ -610,7 +621,7 @@ header {
     top: 22.85px;
   }
 }
-@keyframes a14flying {
+@keyframes a14_flying {
   0% {
     top: -4.15px;
   }
@@ -621,7 +632,7 @@ header {
     top: -4.15px;
   }
 }
-@keyframes a15flying {
+@keyframes a15_flying {
   0% {
     top: 424.7px;
   }
@@ -632,7 +643,7 @@ header {
     top: 424.7px;
   }
 }
-@keyframes a16flying {
+@keyframes a16_flying {
   0% {
     top: 164.85px;
   }
@@ -643,7 +654,7 @@ header {
     top: 164.85px;
   }
 }
-@keyframes a17flying {
+@keyframes a17_flying {
   0% {
     top: -101.15px;
   }
@@ -654,7 +665,7 @@ header {
     top: -101.15px;
   }
 }
-@keyframes a18flying {
+@keyframes a18_flying {
   0% {
     top: -44.65px;
   }
@@ -665,7 +676,7 @@ header {
     top: -44.65px;
   }
 }
-@keyframes a19flying {
+@keyframes a19_flying {
   0% {
     top: 87.85px;
   }
@@ -676,7 +687,7 @@ header {
     top: 87.85px;
   }
 }
-@keyframes a20flying {
+@keyframes a20_flying {
   0% {
     top: 40.85px;
   }
@@ -687,7 +698,7 @@ header {
     top: 40.85px;
   }
 }
-@keyframes a21flying {
+@keyframes a21_flying {
   0% {
     top: -30.5px;
   }
@@ -698,7 +709,7 @@ header {
     top: -30.5px;
   }
 }
-@keyframes a22flying {
+@keyframes a22_flying {
   0% {
     top: -101.15px;
   }
@@ -709,7 +720,7 @@ header {
     top: -101.15px;
   }
 }
-@keyframes a23flying {
+@keyframes a23_flying {
   0% {
     top: 80.85px;
   }
@@ -720,7 +731,7 @@ header {
     top: 80.85px;
   }
 }
-@keyframes a24flying {
+@keyframes a24_flying {
   0% {
     top: -30.15px;
   }
@@ -731,7 +742,7 @@ header {
     top: -30.15px;
   }
 }
-@keyframes a25flying {
+@keyframes a25_flying {
   0% {
     top: -75.15px;
   }
@@ -742,7 +753,7 @@ header {
     top: -75.15px;
   }
 }
-@keyframes a26flying {
+@keyframes a26_flying {
   0% {
     top: 338.2px;
   }
@@ -753,7 +764,7 @@ header {
     top: 338.2px;
   }
 }
-@keyframes a27flying {
+@keyframes a27_flying {
   0% {
     top: 459.85px;
   }
@@ -764,7 +775,7 @@ header {
     top: 459.85px;
   }
 }
-@keyframes a28flying {
+@keyframes a28_flying {
   0% {
     top: 410.85px;
   }
@@ -775,7 +786,7 @@ header {
     top: 410.85px;
   }
 }
-@keyframes a29flying {
+@keyframes a29_flying {
   0% {
     top: 389.85px;
   }
@@ -786,7 +797,7 @@ header {
     top: 389.85px;
   }
 }
-@keyframes a30flying {
+@keyframes a30_flying {
   0% {
     top: 293.7px;
   }
@@ -797,7 +808,7 @@ header {
     top: 293.7px;
   }
 }
-@keyframes a31flying {
+@keyframes a31_flying {
   0% {
     top: 320.85px;
   }
@@ -808,7 +819,7 @@ header {
     top: 320.85px;
   }
 }
-@keyframes a32flying {
+@keyframes a32_flying {
   0% {
     top: 534.85px;
   }
@@ -819,7 +830,7 @@ header {
     top: 534.85px;
   }
 }
-@keyframes a33flying {
+@keyframes a33_flying {
   0% {
     top: 478.35px;
   }
@@ -830,7 +841,7 @@ header {
     top: 478.35px;
   }
 }
-@keyframes a34flying {
+@keyframes a34_flying {
   0% {
     top: 522.35px;
   }
@@ -841,7 +852,7 @@ header {
     top: 522.35px;
   }
 }
-@keyframes a35flying {
+@keyframes a35_flying {
   0% {
     top: 473.35px;
   }
@@ -852,7 +863,7 @@ header {
     top: 473.35px;
   }
 }
-@keyframes a36flying {
+@keyframes a36_flying {
   0% {
     top: 447.85px;
   }
@@ -863,7 +874,7 @@ header {
     top: 447.85px;
   }
 }
-@keyframes a37flying {
+@keyframes a37_flying {
   0% {
     top: 523.35px;
   }
@@ -874,7 +885,7 @@ header {
     top: 523.35px;
   }
 }
-@keyframes a38flying {
+@keyframes a38_flying {
   0% {
     top: 487.35px;
   }
@@ -885,7 +896,7 @@ header {
     top: 487.35px;
   }
 }
-@keyframes a39flying {
+@keyframes a39_flying {
   0% {
     top: 507.85px;
   }
@@ -896,7 +907,7 @@ header {
     top: 507.85px;
   }
 }
-@keyframes a40flying {
+@keyframes a40_flying {
   0% {
     top: 446.85px;
   }
@@ -907,7 +918,7 @@ header {
     top: 446.85px;
   }
 }
-@keyframes a41flying {
+@keyframes a41_flying {
   0% {
     top: 345.85px;
   }
@@ -918,7 +929,7 @@ header {
     top: 345.85px;
   }
 }
-@keyframes a42flying {
+@keyframes a42_flying {
   0% {
     top: 392.85px;
   }
@@ -929,7 +940,7 @@ header {
     top: 392.85px;
   }
 }
-@keyframes a43flying {
+@keyframes a43_flying {
   0% {
     top: 479.5px;
   }
@@ -940,7 +951,7 @@ header {
     top: 479.5px;
   }
 }
-@keyframes a44flying {
+@keyframes a44_flying {
   0% {
     top: 532.85px;
   }
@@ -951,7 +962,7 @@ header {
     top: 532.85px;
   }
 }
-@keyframes a45flying {
+@keyframes a45_flying {
   0% {
     top: 352.85px;
   }
@@ -962,7 +973,7 @@ header {
     top: 352.85px;
   }
 }
-@keyframes a46flying {
+@keyframes a46_flying {
   0% {
     top: 483.85px;
   }
@@ -973,36 +984,36 @@ header {
     top: 483.85px;
   }
 }
-.catear {
+.cat_ear {
   width: 0;
   height: 0;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
   border-bottom: 46px solid #f1aac7;
 }
-.leftear {
+.left_ear {
   position: absolute;
   top: 370px;
   left: 35px;
   transform: rotate(-38deg);
   border-radius: 5px;
   z-index: 5;
-  animation-name: leftearupdown;
+  animation-name: left_ear_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.rightear {
+.right_ear {
   position: absolute;
   top: 351px;
   left: 125px;
   border-radius: 5px;
-  animation-name: rightearupdown;
+  animation-name: right_ear_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catshead {
+.cats_head {
   width: 184px;
   height: 150px;
   background-color: #f1aac7;
@@ -1012,12 +1023,12 @@ header {
   left: 45px;
   transform: rotate(-7deg);
   z-index: 4;
-  animation-name: catsheadupdown;
+  animation-name: cats_head_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catnose {
+.cat_nose {
   width: 0;
   height: 0;
   border-top: 15px solid #c8648f;
@@ -1029,65 +1040,65 @@ header {
   left: 160px;
   transform: rotate(-10deg);
   z-index: 5;
-  animation-name: catnoseupdown;
+  animation-name: cat_nose_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cateye {
+.cat_eye {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #c8648f;
   z-index: 5;
 }
-.lefteye {
+.left_eye {
   position: absolute;
   top: 410px;
   left: 180px;
-  animation-name: lefteyeupdown;
+  animation-name: left_eye_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.righteye {
+.right_eye {
   position: absolute;
   top: 425px;
   left: 110px;
-  animation-name: righteyeupdown;
+  animation-name: right_eye_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catcheek {
+.cat_cheek {
   width: 45px;
   height: 30px;
   border-radius: 50%;
   background-color: #f1aac7;
   z-index: 5;
 }
-.rightcheek {
+.right_cheek {
   position: absolute;
   top: 435px;
   left: 100px;
   transform: rotate(20deg);
-  animation-name: rightcheekupdown;
+  animation-name: right_cheek_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.leftcheek {
+.left_cheek {
   position: absolute;
   top: 419px;
   left: 180px;
   transform: rotate(-55deg);
   width: 40px;
-  animation-name: leftcheekupdown;
+  animation-name: left_cheek_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catbreast {
+.cat_breast {
   background-color: #f1aac7;
   width: 182px;
   height: 243px;
@@ -1097,12 +1108,12 @@ header {
   border-radius: 50%;
   transform: rotate(-25deg);
   z-index: 3;
-  animation-name: catbreastupdown;
+  animation-name: cat_breast_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattummy {
+.cat_tummy {
   background-color: #f1aac7;
   width: 209px;
   height: 182px;
@@ -1112,12 +1123,12 @@ header {
   border-radius: 50%;
   transform: rotate(1deg);
   z-index: 3;
-  animation-name: cattummyupdown;
+  animation-name: cat_tummy_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catbreastclose {
+.cat_breast_close {
   background-color: #c8648f;
   width: 73px;
   height: 87px;
@@ -1127,12 +1138,12 @@ header {
   border-radius: 50%;
   transform: rotate(-50deg);
   z-index: 3;
-  animation-name: catbreastcloseupdown;
+  animation-name: cat_breast_close_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattummyclose {
+.cat_tummy_close {
   background-color: #c8648f;
   width: 98px;
   height: 51px;
@@ -1142,12 +1153,12 @@ header {
   border-radius: 50%;
   transform: rotate(-3deg);
   z-index: 3;
-  animation-name: cattummycloseupdown;
+  animation-name: cat_tummy_close_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catpreleg {
+.cat_preleg {
   background-color: #f1aac7;
   width: 74px;
   height: 98px;
@@ -1157,12 +1168,12 @@ header {
   border-radius: 50%;
   transform: rotate(90deg);
   z-index: 3;
-  animation-name: catprelegupdown;
+  animation-name: cat_preleg_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catleg {
+.cat_leg {
   background-color: #f1aac7;
   width: 92px;
   height: 65px;
@@ -1172,37 +1183,37 @@ header {
   border-radius: 50%;
   transform: rotate(100deg);
   z-index: 3;
-  animation-name: catlegupdown;
+  animation-name: cat_leg_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.catpaw {
+.cat_paw {
   width: 70px;
   height: 70px;
   background-color: #f1aac7;
   border-radius: 50%;
   z-index: 3;
 }
-.leftpaw {
+.left_paw {
   position: absolute;
   top: 550px;
   left: 28px;
-  animation-name: leftpawupdown;
+  animation-name: left_paw_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.rightpaw {
+.right_paw {
   position: absolute;
   top: 450px;
   left: 230px;
-  animation-name: rightpawupdown;
+  animation-name: right_paw_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattailmiddle {
+.cat_tail_middle {
   background-color: #f1aac7;
   width: 181px;
   height: 87px;
@@ -1212,12 +1223,12 @@ header {
   left: 280px;
   border-radius: 50%;
   z-index: 2;
-  animation-name: cattailmiddleupdown;
+  animation-name: cat_tail_middle_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattailstart {
+.cat_tail_start {
   background-color: #f1aac7;
   width: 173px;
   height: 87px;
@@ -1227,12 +1238,12 @@ header {
   position: absolute;
   top: 680px;
   left: 189px;
-  animation-name: cattailstartupdown;
+  animation-name: cat_tail_start_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattailclose {
+.cat_tail_close {
   background-color: #c8648f;
   width: 115px;
   height: 140px;
@@ -1242,12 +1253,12 @@ header {
   position: absolute;
   top: 610px;
   left: 270px;
-  animation-name: cattailcloseupdown;
+  animation-name: cat_tail_close_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.cattailend {
+.cat_tail_end {
   background-color: #f1aac7;
   width: 80px;
   height: 80px;
@@ -1256,12 +1267,12 @@ header {
   position: absolute;
   top: 640px;
   left: 375px;
-  animation-name: cattailendupdown;
+  animation-name: cat_tail_end_up_down;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-@keyframes leftearupdown {
+@keyframes left_ear_up_down {
   0% {
     top: 370px;
   }
@@ -1272,7 +1283,7 @@ header {
     top: 370px;
   }
 }
-@keyframes rightearupdown {
+@keyframes right_ear_up_down {
   0% {
     top: 351px;
   }
@@ -1283,7 +1294,7 @@ header {
     top: 351px;
   }
 }
-@keyframes catsheadupdown {
+@keyframes cats_head_up_down {
   0% {
     top: 380px;
   }
@@ -1294,7 +1305,7 @@ header {
     top: 380px;
   }
 }
-@keyframes catnoseupdown {
+@keyframes cat_nose_up_down {
   0% {
     top: 440px;
   }
@@ -1305,7 +1316,7 @@ header {
     top: 440px;
   }
 }
-@keyframes lefteyeupdown {
+@keyframes left_eye_up_down {
   0% {
     top: 410px;
   }
@@ -1316,7 +1327,7 @@ header {
     top: 410px;
   }
 }
-@keyframes righteyeupdown {
+@keyframes right_eye_up_down {
   0% {
     top: 425px;
   }
@@ -1327,7 +1338,7 @@ header {
     top: 425px;
   }
 }
-@keyframes rightcheekupdown {
+@keyframes right_cheek_up_down {
   0% {
     top: 435px;
   }
@@ -1338,7 +1349,7 @@ header {
     top: 435px;
   }
 }
-@keyframes leftcheekupdown {
+@keyframes left_cheek_up_down {
   0% {
     top: 419px;
   }
@@ -1349,7 +1360,7 @@ header {
     top: 419px;
   }
 }
-@keyframes catbreastupdown {
+@keyframes cat_breast_up_down {
   0% {
     top: 463px;
   }
@@ -1360,7 +1371,7 @@ header {
     top: 463px;
   }
 }
-@keyframes cattummyupdown {
+@keyframes cat_tummy_up_down {
   0% {
     top: 525px;
   }
@@ -1371,7 +1382,7 @@ header {
     top: 525px;
   }
 }
-@keyframes catbreastcloseupdown {
+@keyframes cat_breast_close_up_down {
   0% {
     top: 450px;
   }
@@ -1382,7 +1393,7 @@ header {
     top: 450px;
   }
 }
-@keyframes cattummycloseupdown {
+@keyframes cat_tummy_close_up_down {
   0% {
     top: 485px;
   }
@@ -1393,7 +1404,7 @@ header {
     top: 485px;
   }
 }
-@keyframes catprelegupdown {
+@keyframes cat_preleg_up_down {
   0% {
     top: 510px;
   }
@@ -1404,7 +1415,7 @@ header {
     top: 510px;
   }
 }
-@keyframes catlegupdown {
+@keyframes cat_leg_up_down {
   0% {
     top: 530px;
   }
@@ -1415,7 +1426,7 @@ header {
     top: 530px;
   }
 }
-@keyframes leftpawupdown {
+@keyframes left_paw_up_down {
   0% {
     top: 550px;
   }
@@ -1426,7 +1437,7 @@ header {
     top: 550px;
   }
 }
-@keyframes rightpawupdown {
+@keyframes right_paw_up_down {
   0% {
     top: 450px;
   }
@@ -1437,7 +1448,7 @@ header {
     top: 450px;
   }
 }
-@keyframes cattailmiddleupdown {
+@keyframes cat_tail_middle_up_down {
   0% {
     top: 680px;
   }
@@ -1448,7 +1459,7 @@ header {
     top: 680px;
   }
 }
-@keyframes cattailstartupdown {
+@keyframes cat_tail_start_up_down {
   0% {
     top: 680px;
   }
@@ -1459,7 +1470,7 @@ header {
     top: 680px;
   }
 }
-@keyframes cattailcloseupdown {
+@keyframes cat_tail_close_up_down {
   0% {
     top: 610px;
   }
@@ -1470,7 +1481,7 @@ header {
     top: 610px;
   }
 }
-@keyframes cattailendupdown {
+@keyframes cat_tail_end_up_down {
   0% {
     top: 640px;
   }
@@ -1481,7 +1492,7 @@ header {
     top: 640px;
   }
 }
-.catright {
+.cat_right {
   transform: scaleX(-1);
 }
 .welcome {
@@ -1491,21 +1502,18 @@ header {
   width: 629px;
   height: 100vh;
 }
-.maintext {
+.main-headline {
   color: #bc4e7e;
-  font-size: 32pt;
-  text-align: center;
+  font-size: 42.6px;
   padding-top: 35%;
   font-weight: 900;
-  z-index: 5;
 }
-.undertext {
+.regular-text {
   color: #bc4e7e;
-  font-size: 24pt;
-  text-align: center;
+  font-size: 32px;
   z-index: 5;
 }
-main {
+.main {
   background-color: #f1aac7;
   display: flex;
   flex-flow: column;
@@ -1515,11 +1523,18 @@ main {
 }
 .art_project {
   color: #bc4e7e;
-  font-size: 32pt;
-  text-align: center;
+  font-size: 42.6px;
+  padding-top: 200px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.section-title{
+  color: #bc4e7e;
+  font-size: 42.6px;
   padding-top: 100px;
   padding-bottom: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: underline;
 }
 .project {
@@ -1531,31 +1546,30 @@ main {
   flex-wrap: wrap;
   padding: 10px;
 }
-.art_project_item {
+.projects_item {
   border: 5px solid #f1aac7;
   border-radius: 50px;
   max-width: 25%;
   margin: 20px;
 }
-.art_project_item:hover {
+.projects_item:hover {
   background-color: #d3709b;
 }
-img {
+.img {
   padding: 10px;
   object-fit: cover;
   aspect-ratio: 1/1;
   max-width: 100%;
   border-radius: 50px 50px 0 0;
 }
-.art_project_item > a {
+.projects_item > a {
   color: #f1aac7;
   text-decoration: none;
 }
-.iframesundertext {
-  text-align: center;
-  font-size: 12pt;
+.projects_item-label {
+  font-size: 16px;
   color: #fbf5e5;
-  font-weight: bold;
+  font-weight: 700;
   padding-right: 5px;
   padding-left: 5px;
   padding-bottom: 15px;
@@ -1568,9 +1582,6 @@ img {
 }
 .art_project_item_art > img {
   border-radius: 50px;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-  max-width: 100%;
 }
 .cats {
   display: flex;
@@ -1579,17 +1590,17 @@ img {
   gap: 900px;
   margin-top: 150px;
 }
-.catblackleft {
+.cat_black_left {
   bottom: 0;
   display: block;
   width: 200px;
   height: 200px;
 }
-.catblackright {
+.cat_black_right {
   bottom: 0;
   display: block;
 }
-.catblackhead {
+.cat_black_head {
   position: relative;
   width: 129px;
   height: 129px;
@@ -1597,24 +1608,24 @@ img {
   bottom: 100px;
   border-radius: 50%;
 }
-.catblackeye {
+.cat_black_eye {
   width: 16px;
   height: 16px;
   bottom: 80px;
   background-color: #f1aac7;
   border-radius: 50%;
 }
-.blacklefteye {
+.black_left_eye {
   position: relative;
   left: 80px;
   top: 50px;
 }
-.blackrighteye {
+.black_right_eye {
   position: relative;
   left: 30px;
   top: 30px;
 }
-.catblacknose {
+.cat_black_nose {
   width: 0;
   height: 0;
   border-top: 5px solid #f1aac7;
@@ -1625,20 +1636,20 @@ img {
   transform: rotate(5deg);
   top: 30px;
 }
-.catblackears {
+.cat_black_ears {
   width: 0;
   height: 0;
   border-bottom: 40px solid #252020;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
 }
-.blackleftear {
+.black_left_ear {
   position: relative;
   top: -60px;
   left: 5px;
   transform: rotate(-20deg);
 }
-.blackrightear {
+.black_right_ear {
   position: relative;
   top: -80px;
   left: 85px;
@@ -1650,15 +1661,14 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-#contact {
+.contact {
   border: 5px solid #c8648f;
   border-radius: 50px;
   margin: 0 auto;
   width: 75%;
 }
-.contacttext {
-  text-align: center;
-  font-size: 32pt;
+.contact_text {
+  font-size: 42.6px;
   margin: 25px 0;
 }
 .icon {
@@ -1670,41 +1680,42 @@ footer {
 .icon:hover {
   background-color: #3b3333;
 }
-.icon img {
+.icon .img {
   border-radius: 25px;
   border: 3px solid #c8648f;
 }
-.align {
+.contact_div {
   display: flex;
   flex-flow: row;
   justify-content: center;
   gap: 25px;
   margin-bottom: 50px;
 }
-.plus {
+.horizontal-margin-10 {
   margin: 0 10%;
 }
-li {
-  list-style-type: none;
-}
 
-/*media query works on android tablet and smartphones, but it doesn't work on IPhone for some reason. Maybe the issues happen only in IPhone5*/
-@media (max-width: 1020px) {
-  .catright {
+
+@media only screen and (max-width: 1020px) {
+  .cat_right {
     display: none;
   }
-  .undertext {
-    font-size: 18pt;
-    font-weight: bold;
+  .regular-text {
+    font-size: 24px;
+    font-weight: 700;
   }
   .art_project {
-    font-size: 28pt;
+    font-size: 37.3px;
+    padding-top: 50px;
+  }
+  .section-title{
+    font-size: 37.3px;
     padding-top: 50px;
   }
   #about {
     padding-top: 200px;
   }
-  .art_project_item {
+  .projects_item {
     max-width: 40%;
   }
   .project {
@@ -1713,262 +1724,80 @@ li {
   .art_project_item_art {
     max-width: 40%;
   }
-  .catblackleft {
+  .cat_black_left {
     display: none;
   }
-  .contacttext:first-of-type {
+  .contact_text:first-of-type {
     padding-top: 10px;
   }
 }
-@media (max-width: 840px) {
-  nav {
+@media only screen and (max-width: 840px) {
+  .icon:hover{
+    background-color: transparent;
+  }
+  .main-nav_link {
     justify-content: center;
+    padding-right: 0%;
   }
   a::after {
     display: none;
   }
-  .a1 {
-    animation: none;
-  }
-  .a2 {
-    animation: none;
-  }
-  .a3 {
-    animation: none;
-  }
-  .a4 {
-    animation: none;
-  }
-  .a5 {
-    animation: none;
-  }
-  .a6 {
-    animation: none;
-  }
-  .a7 {
-    animation: none;
-  }
-  .a8 {
-    animation: none;
-  }
-  .a9 {
-    animation: none;
-  }
-  .a10 {
-    animation: none;
-  }
-  .a11 {
-    animation: none;
-  }
-  .a12 {
-    animation: none;
-  }
-  .a13 {
-    animation: none;
-  }
-  .a14 {
-    animation: none;
-  }
-  .a15 {
-    animation: none;
-  }
-  .a16 {
-    animation: none;
-  }
-  .a17 {
-    animation: none;
-  }
-  .a18 {
-    animation: none;
-  }
-  .a19 {
-    animation: none;
-  }
-  .a20 {
-    animation: none;
-  }
-  .a21 {
-    animation: none;
-  }
-  .a22 {
-    animation: none;
-  }
-  .a23 {
-    animation: none;
-  }
-  .a24 {
-    animation: none;
-  }
-  .a25 {
-    animation: none;
-  }
-  .a26 {
-    animation: none;
-  }
-  .a27 {
-    animation: none;
-  }
-  .a28 {
-    animation: none;
-  }
-  .a29 {
-    animation: none;
-  }
-  .a30 {
-    animation: none;
-  }
-  .a31 {
-    animation: none;
-  }
-  .a32 {
-    animation: none;
-  }
-  .a33 {
-    animation: none;
-  }
-  .a34 {
-    animation: none;
-  }
-  .a35 {
-    animation: none;
-  }
-  .a36 {
-    animation: none;
-  }
-  .a37 {
-    animation: none;
-  }
-  .a38 {
-    animation: none;
-  }
-  .a39 {
-    animation: none;
-  }
-  .a40 {
-    animation: none;
-  }
-  .a41 {
-    animation: none;
-  }
-  .a42 {
-    animation: none;
-  }
-  .a43 {
-    animation: none;
-  }
-  .a44 {
-    animation: none;
-  }
-  .a45 {
-    animation: none;
-  }
-  .a46 {
+  .a46, .a45, .a44, .a43, .a42, .a41, .a40, .a39, .a38, .a37, .a36, .a35, .a34, .a33, .a32, .a31, .a30, .a29, .a28, .a27, .a26, .a25, .a24, .a23, .a22, .a21, .a20, .a19, .a18, .a17, .a16, .a15, .a14, .a13, .a12, .a11, .a10, .a9, .a8, .a7, .a6, .a5, .a4, .a3, .a2, .a1 {
     animation: none;
   }
 
-  .art_project_item {
+  .projects_item {
     max-width: 70%;
   }
   .art_project_item_art {
     max-width: 70%;
   }
-  .art_project_item:hover {
+  .projects_item:hover {
     background-color: transparent;
   }
-  nav > a {
-    font-size: 18pt;
+  li > a {
+    font-size: 24px;
   }
-  .maintext {
+  .main-headline {
     padding-top: 30%;
   }
-  .contacttext {
+  .contact_text {
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 24pt;
+    font-size: 25px;
+    font-weight: normal;
   }
   .icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
-  .leftear {
+  .icon img{
+    border: 1px solid #c8648f;
+  }
+  .cat_tail_end, .cat_tail_close, .cat_tail_start, .cat_tail_middle, .right_paw, .left_paw, .cat_leg, .cat_preleg, .right_ear, .cats_head, .left_ear, .cat_nose, .left_eye, .right_eye, .right_cheek, .left_cheek, .cat_breast_close, .cat_breast, .cat_tummy_close, .cat_tummy {
     animation: none;
   }
-  .rightear {
-    animation: none;
-  }
-  .catshead {
-    animation: none;
-  }
-  .catnose {
-    animation: none;
-  }
-  .lefteye {
-    animation: none;
-  }
-  .righteye {
-    animation: none;
-  }
-  .rightcheek {
-    animation: none;
-  }
-  .leftcheek {
-    animation: none;
-  }
-  .catbreastclose {
-    animation: none;
-  }
-  .catbreast {
-    animation: none;
-  }
-  .cattummyclose {
-    animation: none;
-  }
-  .cattummy {
-    animation: none;
-  }
-  .catpreleg {
-    animation: none;
-  }
-  .catleg {
-    animation: none;
-  }
-  .leftpaw {
-    animation: none;
-  }
-  .rightpaw {
-    animation: none;
-  }
-  .cattailmiddle {
-    animation: none;
-  }
-  .cattailstart {
-    animation: none;
-  }
-  .cattailclose {
-    animation: none;
-  }
-  .cattailend {
-    animation: none;
+  li > a{
+    font-size: 16px;
   }
 }
-@media (max-width: 645px) {
-  nav > a {
-    font-size: 15pt;
-  }
-}
-@media (max-width: 569px) {
+@media only screen and (max-width: 569px) {
   body {
     width: 100%;
   }
-  nav > a {
-    font-size: 12pt;
+  li > a {
+    font-size: 16px;
+    padding-right: 0%;
   }
-  .contacttext {
-    font-size: 14pt;
+  .contact_text {
+    font-size: 20px;
   }
   .icon {
     width: 70px;
     height: 70px;
+  }
+  .icon img{
+    border: 1px solid #c8648f;
   }
   #about {
     padding-top: 250px;
@@ -1976,7 +1805,7 @@ li {
   .art_project_item_art {
     max-width: 80%;
   }
-  .art_project_item {
+  .projects_item {
     max-width: 80%;
   }
   .welcome {
