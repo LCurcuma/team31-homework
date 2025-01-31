@@ -7,7 +7,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .header {
-  width: 100%;
   background: linear-gradient(70deg, #ff577f, #ff884b);
   color: white;
 }
@@ -26,6 +25,7 @@ body {
   font-size: larger;
   padding: 5px 50px;
   font-weight: bold;
+  border-top: 2px solid white;
 }
 .hr {
   border: 2px solid white;
@@ -61,7 +61,7 @@ body {
   font-weight: bold;
   padding: 50px 0;
 }
-.button {
+.payment-method_btn {
   border-radius: 20px;
   border: 0;
   box-shadow: 2px 2px 5px gray;
@@ -94,9 +94,8 @@ body {
   max-height: 100px;
   padding-bottom: 20px;
 }
-.submit {
-  width: 250px;
-  height: 100px;
+.primary-button {
+  padding: 40px 100px;
   border-radius: 50px;
   border: none;
   background: linear-gradient(70deg, #ff577f, #ff884b);
