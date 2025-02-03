@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-ease projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 class="main-text">Smart-ease project (for java-script practice)</h1>
+    
+    <section class="project-tile">
+    <script src="Age-ify.js"></script>
+    <h2 class="tile-title">Age-ify</h2>
+    <label name>Input year you were born</label>
+    <input type="number" id="yearOfBirth" class="input-bar">
+    <label>Input future year</label>
+    <input type="number" id="futureYear" class="input-bar">
+    <button onclick="AgeIfy()" class="result-button">Calculate future age</button>
+    <p id="futureAge"></p>
+    </section>
+
+    <section class="project-tile">
+    <script src="Goodboy-Oldboy.js"></script>
+    <h2 class="tile-title">Dogs variant of Age-Ify</h2>
+    <label>Input year your dog was born</label>
+    <input type="number" id="dogYearOfBirth" class="input-bar">
+    <label>Input future year</label>
+    <input type="number" id="dogsFutureYear" class="input-bar">
+    <button onclick="dogAgeIfy()" class="result-button">Calculate dog's future age in dog years</button>
+    <button onclick="dogAgeIfyInHuman()" class="result-button">Calculate dog's future age in human years</button>
+    <p id="dogFutureAge"></p>
+    </section>
+
+    <section class="project-tile">
+    <script src="Housey-pricey.js"></script>
+    <h2 class="tile-title">Housey pricey</h2>
+    <label>Input width of house(in meters)</label>
+    <input type="number" id="width" class="input-bar">
+    <label>Input height of house(in meters)</label>
+    <input type="number" id="height" class="input-bar">
+    <label>Input depth of house(in meters)</label>
+    <input type="number" id="depth" class="input-bar">
+    <label>Input garden size(in square meter)</label>
+    <input type="number" id="gardenSize" class="input-bar">
+    <label>Input current price of house</label>
+    <input type="number" id="price" class="input-bar">
+    <button onclick="houseyPricey()" class="result-button">Am I paying to much?</button>
+    <p id="payingResult"></p>
+    </section>
+
+    <section class="project-tile">
+    <script src="Ez-Namey.js"></script>
+    <h2 class="tile-title">Ez Namey</h2>
+    <p id="randomStartupName"></p>
+    <button onclick="ezNamey()" class="result-button">Gimme random startup name!!!</button>
+    </section>
+
+</body>
+
+</html>
