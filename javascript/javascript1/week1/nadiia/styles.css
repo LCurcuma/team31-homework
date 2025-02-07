@@ -12,12 +12,15 @@
 body{
     font-family: text_font, sans-serif;
     background-color: #ffa481;
+    font-size: 25px;
+}
+
+.main{
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 70px;
-    font-size: 25px;
 }
 
 .main-text{
