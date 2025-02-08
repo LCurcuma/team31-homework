@@ -1,0 +1,1881 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: main_font;
+  src: url("AnnieUseYourTelescope.ttf");
+  font-weight: regular;
+}
+body {
+  font-family: main_font, sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+p,
+.projects_item-label {
+  margin-top: 50%;
+}
+p,
+.regular-text {
+  margin: 0%;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #252020;
+  z-index: 6;
+}
+.main-nav_link {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+li > a {
+  position: relative;
+  text-decoration: none;
+  color: #fbf5e5;
+  font-size: 26.6px;
+}
+li > a::after {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background: #fbf5e5;
+  transition: width 0.2s;
+}
+li > a:hover::after {
+  width: 110%;
+}
+header {
+  background: linear-gradient(#c8648f, #f1aac7);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.circle {
+  border-radius: 50%;
+  background-color: #c8648f;
+  position: absolute;
+}
+.b47 {
+  width: 31.3px;
+  height: 31.3px;
+}
+.b67 {
+  width: 44.6px;
+  height: 44.6px;
+}
+.b71 {
+  width: 47.3px;
+  height: 47.3px;
+}
+.b116 {
+  width: 77.3px;
+  height: 77.3px;
+}
+.b131 {
+  width: 87.3px;
+  height: 87.3px;
+}
+.b132 {
+  width: 88px;
+  height: 88px;
+}
+.b164 {
+  width: 109.3px;
+  height: 109.3px;
+}
+.b171 {
+  width: 114px;
+  height: 114px;
+}
+.b194 {
+  width: 129.3px;
+  height: 129.3px;
+}
+.b593 {
+  width: 395.3px;
+  height: 395.3px;
+}
+.b676 {
+  width: 450.6px;
+  height: 450.6px;
+}
+.a1 {
+  top: 535.85px;
+  left: 503.4px;
+  animation-name: a1_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a2 {
+  top: 557px;
+  left: 738.94px;
+  animation-name: a2_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a3 {
+  top: -22.65px;
+  left: 249.29px;
+  animation-name: a3_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a4 {
+  top: 26.35px;
+  left: 94.58px;
+  animation-name: a4_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a5 {
+  top: 67.85px;
+  left: 144.35px;
+  animation-name: a5_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a6 {
+  top: -105.65px;
+  left: 167.7px;
+  animation-name: a6_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a7 {
+  top: -69.65px;
+  left: 98.87px;
+  animation-name: a7_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a8 {
+  top: -90.15px;
+  left: 35.93px;
+  animation-name: a8_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a9 {
+  top: -29.15px;
+  left: 10.64px;
+  animation-name: a9_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a10 {
+  top: -98px;
+  left: 293.05px;
+  animation-name: a10_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a11 {
+  top: -125.9px;
+  left: 1072.34px;
+  animation-name: a11_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a12 {
+  top: -192.15px;
+  left: 877.2px;
+  animation-name: a12_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a13 {
+  top: 22.85px;
+  left: 977.11px;
+  animation-name: a13_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a14 {
+  top: -4.15px;
+  left: 666.64px;
+  animation-name: a14_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a15 {
+  top: 424.7px;
+  left: 1048.87px;
+  animation-name: a15_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a16 {
+  top: 164.85px;
+  left: 1118.99px;
+  animation-name: a16_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a17 {
+  top: -101.15px;
+  left: 643.76px;
+  animation-name: a17_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a18 {
+  top: -44.65px;
+  left: 784.76px;
+  animation-name: a18_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a19 {
+  top: 87.85px;
+  left: 980.05px;
+  animation-name: a19_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a20 {
+  top: 40.85px;
+  left: 878.29px;
+  animation-name: a20_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a21 {
+  top: -30.5px;
+  left: 867.11px;
+  animation-name: a21_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a22 {
+  top: -101.15px;
+  left: 608.85px;
+  animation-name: a22_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a23 {
+  top: 80.85px;
+  left: 904.35px;
+  animation-name: a23_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a24 {
+  top: -30.15px;
+  left: 922.4px;
+  animation-name: a24_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a25 {
+  top: -75.15px;
+  left: 549.29px;
+  animation-name: a25_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a26 {
+  top: 338.2px;
+  left: -382.94px;
+  animation-name: a26_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a27 {
+  top: 459.85px;
+  left: -132.35px;
+  animation-name: a27_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a28 {
+  top: 410.85px;
+  left: 33.58px;
+  animation-name: a28_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a29 {
+  top: 389.85px;
+  left: 396.05px;
+  animation-name: a29_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a30 {
+  top: 293.7px;
+  left: 46.52px;
+  animation-name: a30_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a31 {
+  top: 320.85px;
+  left: -56.29px;
+  animation-name: a31_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a32 {
+  top: 534.85px;
+  left: 365.93px;
+  animation-name: a32_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a33 {
+  top: 478.35px;
+  left: 225.93px;
+  animation-name: a33_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a34 {
+  top: 522.35px;
+  left: 1023.4px;
+  animation-name: a34_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a35 {
+  top: 473.35px;
+  left: 1178.11px;
+  animation-name: a35_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a36 {
+  top: 447.85px;
+  left: 1244.35px;
+  animation-name: a36_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a37 {
+  top: 523.35px;
+  left: 1122.99px;
+  animation-name: a37_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a38 {
+  top: 487.35px;
+  left: 1191.82px;
+  animation-name: a38_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a39 {
+  top: 507.85px;
+  left: 1254.76px;
+  animation-name: a39_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a40 {
+  top: 446.85px;
+  left: 1280.05px;
+  animation-name: a40_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a41 {
+  top: 345.85px;
+  left: 30.64px;
+  animation-name: a41_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a42 {
+  top: 392.85px;
+  left: 132.4px;
+  animation-name: a42_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a43 {
+  top: 479.5px;
+  left: 158.88px;
+  animation-name: a43_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a44 {
+  top: 532.85px;
+  left: 282.99px;
+  animation-name: a44_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a45 {
+  top: 352.85px;
+  left: -64.65px;
+  animation-name: a45_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.a46 {
+  top: 483.85px;
+  left: 108.29px;
+  animation-name: a46_flying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes a1_flying {
+  0% {
+    top: 535.85px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 535.85px;
+  }
+}
+@keyframes a2_flying {
+  0% {
+    top: 557px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 557px;
+  }
+}
+@keyframes a3_flying {
+  0% {
+    top: -22.65px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -22.65px;
+  }
+}
+@keyframes a4_flying {
+  0% {
+    top: 26.35px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: 26.35px;
+  }
+}
+@keyframes a5_flying {
+  0% {
+    top: 67.85px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 67.85px;
+  }
+}
+@keyframes a6_flying {
+  0% {
+    top: -105.65px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: -105.65px;
+  }
+}
+@keyframes a7_flying {
+  0% {
+    top: -69.65px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -69.65px;
+  }
+}
+@keyframes a8_flying {
+  0% {
+    top: -90.15px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -90.15px;
+  }
+}
+@keyframes a9_flying {
+  0% {
+    top: -29.15px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -29.15px;
+  }
+}
+@keyframes a10_flying {
+  0% {
+    top: -98px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -98px;
+  }
+}
+@keyframes a11_flying {
+  0% {
+    top: -125.9px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: -125.9px;
+  }
+}
+@keyframes a12_flying {
+  0% {
+    top: -192.15px;
+  }
+  50% {
+    top: -200px;
+  }
+  100% {
+    top: -192.15px;
+  }
+}
+@keyframes a13_flying {
+  0% {
+    top: 22.85px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 22.85px;
+  }
+}
+@keyframes a14_flying {
+  0% {
+    top: -4.15px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -4.15px;
+  }
+}
+@keyframes a15_flying {
+  0% {
+    top: 424.7px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 424.7px;
+  }
+}
+@keyframes a16_flying {
+  0% {
+    top: 164.85px;
+  }
+  50% {
+    top: 150px;
+  }
+  100% {
+    top: 164.85px;
+  }
+}
+@keyframes a17_flying {
+  0% {
+    top: -101.15px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: -101.15px;
+  }
+}
+@keyframes a18_flying {
+  0% {
+    top: -44.65px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -44.65px;
+  }
+}
+@keyframes a19_flying {
+  0% {
+    top: 87.85px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 87.85px;
+  }
+}
+@keyframes a20_flying {
+  0% {
+    top: 40.85px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 40.85px;
+  }
+}
+@keyframes a21_flying {
+  0% {
+    top: -30.5px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -30.5px;
+  }
+}
+@keyframes a22_flying {
+  0% {
+    top: -101.15px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: -101.15px;
+  }
+}
+@keyframes a23_flying {
+  0% {
+    top: 80.85px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 80.85px;
+  }
+}
+@keyframes a24_flying {
+  0% {
+    top: -30.15px;
+  }
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -30.15px;
+  }
+}
+@keyframes a25_flying {
+  0% {
+    top: -75.15px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -75.15px;
+  }
+}
+@keyframes a26_flying {
+  0% {
+    top: 338.2px;
+  }
+  50% {
+    top: 300px;
+  }
+  100% {
+    top: 338.2px;
+  }
+}
+@keyframes a27_flying {
+  0% {
+    top: 459.85px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 459.85px;
+  }
+}
+@keyframes a28_flying {
+  0% {
+    top: 410.85px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 410.85px;
+  }
+}
+@keyframes a29_flying {
+  0% {
+    top: 389.85px;
+  }
+  50% {
+    top: 350px;
+  }
+  100% {
+    top: 389.85px;
+  }
+}
+@keyframes a30_flying {
+  0% {
+    top: 293.7px;
+  }
+  50% {
+    top: 250px;
+  }
+  100% {
+    top: 293.7px;
+  }
+}
+@keyframes a31_flying {
+  0% {
+    top: 320.85px;
+  }
+  50% {
+    top: 300px;
+  }
+  100% {
+    top: 320.85px;
+  }
+}
+@keyframes a32_flying {
+  0% {
+    top: 534.85px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 534.85px;
+  }
+}
+@keyframes a33_flying {
+  0% {
+    top: 478.35px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 478.35px;
+  }
+}
+@keyframes a34_flying {
+  0% {
+    top: 522.35px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 522.35px;
+  }
+}
+@keyframes a35_flying {
+  0% {
+    top: 473.35px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 473.35px;
+  }
+}
+@keyframes a36_flying {
+  0% {
+    top: 447.85px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 447.85px;
+  }
+}
+@keyframes a37_flying {
+  0% {
+    top: 523.35px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 523.35px;
+  }
+}
+@keyframes a38_flying {
+  0% {
+    top: 487.35px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 487.35px;
+  }
+}
+@keyframes a39_flying {
+  0% {
+    top: 507.85px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 507.85px;
+  }
+}
+@keyframes a40_flying {
+  0% {
+    top: 446.85px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 446.85px;
+  }
+}
+@keyframes a41_flying {
+  0% {
+    top: 345.85px;
+  }
+  50% {
+    top: 300px;
+  }
+  100% {
+    top: 345.85px;
+  }
+}
+@keyframes a42_flying {
+  0% {
+    top: 392.85px;
+  }
+  50% {
+    top: 350px;
+  }
+  100% {
+    top: 392.85px;
+  }
+}
+@keyframes a43_flying {
+  0% {
+    top: 479.5px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 479.5px;
+  }
+}
+@keyframes a44_flying {
+  0% {
+    top: 532.85px;
+  }
+  50% {
+    top: 500px;
+  }
+  100% {
+    top: 532.85px;
+  }
+}
+@keyframes a45_flying {
+  0% {
+    top: 352.85px;
+  }
+  50% {
+    top: 350px;
+  }
+  100% {
+    top: 352.85px;
+  }
+}
+@keyframes a46_flying {
+  0% {
+    top: 483.85px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 483.85px;
+  }
+}
+.cat_ear {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 46px solid #f1aac7;
+}
+.left_ear {
+  position: absolute;
+  top: 370px;
+  left: 35px;
+  transform: rotate(-38deg);
+  border-radius: 5px;
+  z-index: 5;
+  animation-name: left_ear_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.right_ear {
+  position: absolute;
+  top: 351px;
+  left: 125px;
+  border-radius: 5px;
+  animation-name: right_ear_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cats_head {
+  width: 184px;
+  height: 150px;
+  background-color: #f1aac7;
+  border-radius: 50%;
+  position: absolute;
+  top: 380px;
+  left: 45px;
+  transform: rotate(-7deg);
+  z-index: 4;
+  animation-name: cats_head_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_nose {
+  width: 0;
+  height: 0;
+  border-top: 15px solid #c8648f;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-radius: 5px;
+  position: absolute;
+  top: 440px;
+  left: 160px;
+  transform: rotate(-10deg);
+  z-index: 5;
+  animation-name: cat_nose_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_eye {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c8648f;
+  z-index: 5;
+}
+.left_eye {
+  position: absolute;
+  top: 410px;
+  left: 180px;
+  animation-name: left_eye_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.right_eye {
+  position: absolute;
+  top: 425px;
+  left: 110px;
+  animation-name: right_eye_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_cheek {
+  width: 45px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f1aac7;
+  z-index: 5;
+}
+.right_cheek {
+  position: absolute;
+  top: 435px;
+  left: 100px;
+  transform: rotate(20deg);
+  animation-name: right_cheek_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.left_cheek {
+  position: absolute;
+  top: 419px;
+  left: 180px;
+  transform: rotate(-55deg);
+  width: 40px;
+  animation-name: left_cheek_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_breast {
+  background-color: #f1aac7;
+  width: 182px;
+  height: 243px;
+  position: absolute;
+  top: 463px;
+  left: 108px;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  z-index: 3;
+  animation-name: cat_breast_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tummy {
+  background-color: #f1aac7;
+  width: 209px;
+  height: 182px;
+  position: absolute;
+  top: 525px;
+  left: 133px;
+  border-radius: 50%;
+  transform: rotate(1deg);
+  z-index: 3;
+  animation-name: cat_tummy_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_breast_close {
+  background-color: #c8648f;
+  width: 73px;
+  height: 87px;
+  position: absolute;
+  top: 450px;
+  left: 214px;
+  border-radius: 50%;
+  transform: rotate(-50deg);
+  z-index: 3;
+  animation-name: cat_breast_close_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tummy_close {
+  background-color: #c8648f;
+  width: 98px;
+  height: 51px;
+  position: absolute;
+  top: 485px;
+  left: 230px;
+  border-radius: 50%;
+  transform: rotate(-3deg);
+  z-index: 3;
+  animation-name: cat_tummy_close_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_preleg {
+  background-color: #f1aac7;
+  width: 74px;
+  height: 98px;
+  position: absolute;
+  top: 510px;
+  left: 260px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  z-index: 3;
+  animation-name: cat_preleg_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_leg {
+  background-color: #f1aac7;
+  width: 92px;
+  height: 65px;
+  position: absolute;
+  top: 530px;
+  left: 290px;
+  border-radius: 50%;
+  transform: rotate(100deg);
+  z-index: 3;
+  animation-name: cat_leg_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_paw {
+  width: 70px;
+  height: 70px;
+  background-color: #f1aac7;
+  border-radius: 50%;
+  z-index: 3;
+}
+.left_paw {
+  position: absolute;
+  top: 550px;
+  left: 28px;
+  animation-name: left_paw_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.right_paw {
+  position: absolute;
+  top: 450px;
+  left: 230px;
+  animation-name: right_paw_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tail_middle {
+  background-color: #f1aac7;
+  width: 181px;
+  height: 87px;
+  transform: rotate(-30deg);
+  position: absolute;
+  top: 680px;
+  left: 280px;
+  border-radius: 50%;
+  z-index: 2;
+  animation-name: cat_tail_middle_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tail_start {
+  background-color: #f1aac7;
+  width: 173px;
+  height: 87px;
+  transform: rotate(29deg);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  top: 680px;
+  left: 189px;
+  animation-name: cat_tail_start_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tail_close {
+  background-color: #c8648f;
+  width: 115px;
+  height: 140px;
+  transform: rotate(79deg);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  top: 610px;
+  left: 270px;
+  animation-name: cat_tail_close_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.cat_tail_end {
+  background-color: #f1aac7;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 3;
+  position: absolute;
+  top: 640px;
+  left: 375px;
+  animation-name: cat_tail_end_up_down;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes left_ear_up_down {
+  0% {
+    top: 370px;
+  }
+  50% {
+    top: 270px;
+  }
+  100% {
+    top: 370px;
+  }
+}
+@keyframes right_ear_up_down {
+  0% {
+    top: 351px;
+  }
+  50% {
+    top: 251px;
+  }
+  100% {
+    top: 351px;
+  }
+}
+@keyframes cats_head_up_down {
+  0% {
+    top: 380px;
+  }
+  50% {
+    top: 280px;
+  }
+  100% {
+    top: 380px;
+  }
+}
+@keyframes cat_nose_up_down {
+  0% {
+    top: 440px;
+  }
+  50% {
+    top: 360px;
+  }
+  100% {
+    top: 440px;
+  }
+}
+@keyframes left_eye_up_down {
+  0% {
+    top: 410px;
+  }
+  50% {
+    top: 330px;
+  }
+  100% {
+    top: 410px;
+  }
+}
+@keyframes right_eye_up_down {
+  0% {
+    top: 425px;
+  }
+  50% {
+    top: 345px;
+  }
+  100% {
+    top: 425px;
+  }
+}
+@keyframes right_cheek_up_down {
+  0% {
+    top: 435px;
+  }
+  50% {
+    top: 350px;
+  }
+  100% {
+    top: 435px;
+  }
+}
+@keyframes left_cheek_up_down {
+  0% {
+    top: 419px;
+  }
+  50% {
+    top: 334px;
+  }
+  100% {
+    top: 419px;
+  }
+}
+@keyframes cat_breast_up_down {
+  0% {
+    top: 463px;
+  }
+  50% {
+    top: 383px;
+  }
+  100% {
+    top: 463px;
+  }
+}
+@keyframes cat_tummy_up_down {
+  0% {
+    top: 525px;
+  }
+  50% {
+    top: 445px;
+  }
+  100% {
+    top: 525px;
+  }
+}
+@keyframes cat_breast_close_up_down {
+  0% {
+    top: 450px;
+  }
+  50% {
+    top: 370px;
+  }
+  100% {
+    top: 450px;
+  }
+}
+@keyframes cat_tummy_close_up_down {
+  0% {
+    top: 485px;
+  }
+  50% {
+    top: 405px;
+  }
+  100% {
+    top: 485px;
+  }
+}
+@keyframes cat_preleg_up_down {
+  0% {
+    top: 510px;
+  }
+  50% {
+    top: 430px;
+  }
+  100% {
+    top: 510px;
+  }
+}
+@keyframes cat_leg_up_down {
+  0% {
+    top: 530px;
+  }
+  50% {
+    top: 450px;
+  }
+  100% {
+    top: 530px;
+  }
+}
+@keyframes left_paw_up_down {
+  0% {
+    top: 550px;
+  }
+  50% {
+    top: 470px;
+  }
+  100% {
+    top: 550px;
+  }
+}
+@keyframes right_paw_up_down {
+  0% {
+    top: 450px;
+  }
+  50% {
+    top: 370px;
+  }
+  100% {
+    top: 450px;
+  }
+}
+@keyframes cat_tail_middle_up_down {
+  0% {
+    top: 680px;
+  }
+  50% {
+    top: 600px;
+  }
+  100% {
+    top: 680px;
+  }
+}
+@keyframes cat_tail_start_up_down {
+  0% {
+    top: 680px;
+  }
+  50% {
+    top: 600px;
+  }
+  100% {
+    top: 680px;
+  }
+}
+@keyframes cat_tail_close_up_down {
+  0% {
+    top: 610px;
+  }
+  50% {
+    top: 530px;
+  }
+  100% {
+    top: 610px;
+  }
+}
+@keyframes cat_tail_end_up_down {
+  0% {
+    top: 640px;
+  }
+  50% {
+    top: 560px;
+  }
+  100% {
+    top: 640px;
+  }
+}
+.cat_right {
+  transform: scaleX(-1);
+}
+.welcome {
+  background-color: #f1aac7;
+  margin-left: auto;
+  margin-right: auto;
+  width: 629px;
+  height: 100vh;
+}
+.main-headline {
+  color: #bc4e7e;
+  font-size: 42.6px;
+  padding-top: 35%;
+  font-weight: 900;
+}
+.regular-text {
+  color: #bc4e7e;
+  font-size: 32px;
+  z-index: 5;
+}
+.main {
+  background-color: #f1aac7;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: -200px;
+}
+.art_project {
+  color: #bc4e7e;
+  font-size: 42.6px;
+  padding-top: 200px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.section-title {
+  color: #bc4e7e;
+  font-size: 42.6px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.project {
+  background-color: #c8648f;
+  width: 75%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.projects_item {
+  border: 5px solid #f1aac7;
+  border-radius: 50px;
+  max-width: 25%;
+  margin: 20px;
+}
+.projects_item:hover {
+  background-color: #d3709b;
+}
+.img {
+  padding: 10px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  max-width: 100%;
+  border-radius: 50px 50px 0 0;
+}
+.projects_item > a {
+  color: #f1aac7;
+  text-decoration: none;
+}
+.projects_item-label {
+  font-size: 16px;
+  color: #fbf5e5;
+  font-weight: 700;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 15px;
+}
+.art_project_item_art {
+  border: 5px solid #f1aac7;
+  border-radius: 50px;
+  max-width: 25%;
+  margin: 20px;
+}
+.art_project_item_art > img {
+  border-radius: 50px;
+}
+.cats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 900px;
+  margin-top: 150px;
+}
+.cat_black_left {
+  bottom: 0;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+.cat_black_right {
+  bottom: 0;
+  display: block;
+}
+.cat_black_head {
+  position: relative;
+  width: 129px;
+  height: 129px;
+  background-color: #252020;
+  bottom: 100px;
+  border-radius: 50%;
+}
+.cat_black_eye {
+  width: 16px;
+  height: 16px;
+  bottom: 80px;
+  background-color: #f1aac7;
+  border-radius: 50%;
+}
+.black_left_eye {
+  position: relative;
+  left: 80px;
+  top: 50px;
+}
+.black_right_eye {
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+.cat_black_nose {
+  width: 0;
+  height: 0;
+  border-top: 5px solid #f1aac7;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: relative;
+  left: 48px;
+  transform: rotate(5deg);
+  top: 30px;
+}
+.cat_black_ears {
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid #252020;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+}
+.black_left_ear {
+  position: relative;
+  top: -60px;
+  left: 5px;
+  transform: rotate(-20deg);
+}
+.black_right_ear {
+  position: relative;
+  top: -80px;
+  left: 85px;
+  transform: rotate(48deg);
+}
+footer {
+  background-color: #252020;
+  color: #fbf5e5;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.contact {
+  border: 5px solid #c8648f;
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 75%;
+}
+.contact_text {
+  font-size: 42.6px;
+  margin: 25px 0;
+}
+.icon {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 25px;
+}
+.icon:hover {
+  background-color: #3b3333;
+}
+.icon .img {
+  border-radius: 25px;
+  border: 3px solid #c8648f;
+}
+.contact_div {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.horizontal-margin-10 {
+  margin: 0 10%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .cat_right {
+    display: none;
+  }
+  .regular-text {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .art_project {
+    font-size: 37.3px;
+    padding-top: 50px;
+  }
+  .section-title {
+    font-size: 37.3px;
+    padding-top: 50px;
+  }
+  #about {
+    padding-top: 200px;
+  }
+  .projects_item {
+    max-width: 40%;
+  }
+  .project {
+    gap: 0;
+  }
+  .art_project_item_art {
+    max-width: 40%;
+  }
+  .cat_black_left {
+    display: none;
+  }
+  .contact_text:first-of-type {
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .icon:hover {
+    background-color: transparent;
+  }
+  .main-nav_link {
+    justify-content: center;
+    padding-right: 0%;
+  }
+  a::after {
+    display: none;
+  }
+  .a46,
+  .a45,
+  .a44,
+  .a43,
+  .a42,
+  .a41,
+  .a40,
+  .a39,
+  .a38,
+  .a37,
+  .a36,
+  .a35,
+  .a34,
+  .a33,
+  .a32,
+  .a31,
+  .a30,
+  .a29,
+  .a28,
+  .a27,
+  .a26,
+  .a25,
+  .a24,
+  .a23,
+  .a22,
+  .a21,
+  .a20,
+  .a19,
+  .a18,
+  .a17,
+  .a16,
+  .a15,
+  .a14,
+  .a13,
+  .a12,
+  .a11,
+  .a10,
+  .a9,
+  .a8,
+  .a7,
+  .a6,
+  .a5,
+  .a4,
+  .a3,
+  .a2,
+  .a1 {
+    animation: none;
+  }
+
+  .projects_item {
+    max-width: 70%;
+  }
+  .art_project_item_art {
+    max-width: 70%;
+  }
+  .projects_item:hover {
+    background-color: transparent;
+  }
+  li > a {
+    font-size: 24px;
+  }
+  .main-headline {
+    padding-top: 30%;
+  }
+  .contact_text {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: normal;
+  }
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+  .icon img {
+    border: 1px solid #c8648f;
+  }
+  .cat_tail_end,
+  .cat_tail_close,
+  .cat_tail_start,
+  .cat_tail_middle,
+  .right_paw,
+  .left_paw,
+  .cat_leg,
+  .cat_preleg,
+  .right_ear,
+  .cats_head,
+  .left_ear,
+  .cat_nose,
+  .left_eye,
+  .right_eye,
+  .right_cheek,
+  .left_cheek,
+  .cat_breast_close,
+  .cat_breast,
+  .cat_tummy_close,
+  .cat_tummy {
+    animation: none;
+  }
+  li > a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 569px) {
+  body {
+    width: 100%;
+  }
+  li > a {
+    font-size: 16px;
+    padding-right: 0%;
+  }
+  .contact_text {
+    font-size: 20px;
+  }
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+  .icon img {
+    border: 1px solid #c8648f;
+  }
+  #about {
+    padding-top: 250px;
+  }
+  .art_project_item_art {
+    max-width: 80%;
+  }
+  .projects_item {
+    max-width: 80%;
+  }
+  .welcome {
+    width: 100%;
+  }
+}

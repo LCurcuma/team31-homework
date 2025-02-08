@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Payment page</title>
+    <!--Netlify deployment: https://mellifluous-blini-c03940.netlify.app-->
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="h1">Order summary</h1>
+      <p class="p Total">Total<span>$333/month</span></p>
+      <p class="p Total_2">Total<span>$100</span></p>
+    </header>
+    <main class="main">
+      <form class="form">
+        <fieldset class="fieldset">
+          <legend class="legend">Payment Method</legend>
+          <div class="buttons">
+            <button
+              name="payment_method"
+              value="credit"
+              type="button"
+              class="payment-method_btn"
+            >
+              <div class="images">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png"
+                  alt="Mastercard logo"
+                  class="img button_image"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg"
+                  alt="Visa logo"
+                  class="img button_image"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Danske_Bank_logo.svg/2560px-Danske_Bank_logo.svg.png"
+                  alt="Danske Bank logo"
+                  class="img button_image"
+                />
+              </div>
+              Credit/Debit
+            </button>
+            <button
+              name="payment_method"
+              value="paypal"
+              type="button"
+              class="payment-method_btn"
+            >
+              <img
+                src="https://www.advancedisco.co.uk/news/wp-content/uploads/2023/12/Paypal_2014_logo.png"
+                alt="Paypal logo"
+                class="img"
+              />
+              PayPal
+            </button>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset card_info">
+          <legend class="legend">Card Info</legend>
+          <div class="container">
+            <label for="card_number" class="label w_tip">Card Number</label>
+            <div class="with_tip">
+              <input
+                name="card_number"
+                type="number"
+                placeholder="1234 1234 1234 1234"
+                class="input card_number"
+              /><img
+                src="https://pngimg.com/d/question_mark_PNG53.png"
+                title="You should write full card-number"
+                class="img tip"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <label for="expiry_date" class="label">Expiry Date</label>
+            <input
+              name="expiry_date"
+              type="number"
+              placeholder="MM/YY"
+              class="input expiry_date"
+            />
+          </div>
+          <div class="container">
+            <label for="security_code" class="label w_tip">Security Code</label>
+            <div class="with_tip">
+              <input
+                name="security_code"
+                type="number"
+                placeholder="CVV"
+                class="input security_code"
+              /><img
+                src="https://pngimg.com/d/question_mark_PNG53.png"
+                title="CVV number is the three numbers on the another side of credit-card"
+                class="img tip"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" value="Buy Now" class="primary-button" />
+      </form>
+      <a href="#" class="a">Need Help?</a>
+    </main>
+  </body>
+</html>
