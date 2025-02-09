@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise js2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <script src="exercise1.js"></script>
+    <div class="container">
+    <label for="balance" class="label-balance">Input bank balance</label>
+    <input type="number" id="balance" class="input_block">
+    <button onclick="checkBalance()" class="result-button">Check your bank balance</button>
+    <p id="balance_result" class="result"></p>
+    </div>
+    
+    <div class="container">
+        <label for="circle-radius" class="label-balance">Input radius of the circle</label>
+        <input type="number" id="circle-radius" class="input_block">
+        <button onclick="getCircleArea()" class="result-button">Calculate circle area</button>
+        <p id="circle-area" class="result"></p>
+    </div>
+
+    <div class="container">
+        <label for="celsius" class="label-balance">Input temperature in celcius</label>
+        <input type="number" id="celsius" class="input_block">
+        <button onclick="celciusToFahreneit()" class="result-button">Convert to temperature in fahrenheit</button>
+        <p id="fahrenheit" class="result"></p>
+    </div>
+    
+    <div class="container">
+        <label for="date" class="label-balance">Input date in "YYYY-MM-DD"</label>
+        <input type="text" id="date" class="input_block">
+        <button onclick="convertDate()" class="result-button">Convert date to "DD-MM-YYYY" format</button>
+        <p id="result_date" class="result"></p>
+    </div>
+
+    <div class="container">
+        <button onclick="simpleLoop()" class="result-button">Show numbers from 74 to 98</button>
+        <p id="result-of-simple-loop" class="result"></p>
+    </div>
+
+    <div class="container">
+        <label for="string" class="label-balance">Input string</label>
+        <input type="text" id="string" class="input_block">
+        <label for="number-of-times" class="label-balance">Input amount of times, you want to output this string</label>
+        <input type="number" id="number-of-times" class="input_block">
+        <button onclick="writeString()" class="result-button">Show string</button>
+        <p id="result_string" class="result"></p>
+    </div> 
+
+    <div class="container">
+        <label for="email" class="label-balance">Input e-mail addresses (separated with "|")</label>
+        <input type="text" id="email" class="input_block">
+        <button onclick="sendEmailTo()" class="result-button">Show separated emails</button>
+        <p id="emails" class="result"></p>
+    </div>
+</main>
+</body>
+</html>
