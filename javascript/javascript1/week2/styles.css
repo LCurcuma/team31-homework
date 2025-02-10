@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: text_font;
+    src: url("AnnieUseYourTelescope.ttf");
+}
+
+body{
+    font-family: text_font, sans-serif;
+    background-color: #EA86B6;
+    font-size: 25px;
+    text-align: center;
+}
+
+.main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.main-text{
+    color: #FCEEF5;
+    font-size: 38px;
+    margin-top: 25px;
+}
+
+.project-tile{
+    background-color: #FCEEF5;
+    border-radius: 20px;
+    color:#EA86B6;
+    width:45%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.tile-title{
+    font-size: 33px;
+}
+
+.input-bar{
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #EA86B6;
+    background-color: #FCEEF5;
+    text-align: center;
+    font-family: text_font, sans-serif;
+    font-size: 25px;
+    color: #EA86B6;
+}
+
+.input-bar:focus{
+    outline: none;
+    background-color: #FCEEF5;
+}
+
+.result-button{
+    width: 40%;
+    aspect-ratio: 2/1;
+    border-radius: 20px;
+    border: 3px solid #EA86B6;
+    background-color: #FCEEF5;
+    color: #EA86B6;
+    font-family: text_font, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.result-button:hover{
+    background-color: #FCEEF5;
+}
+
+.radio-button{
+    height: 40px;
+    border-radius: 20px;
+    border: 3px solid #EA86B6;
+    background-color: #FCEEF5;
+    text-align: center;
+    font-family: text_font, sans-serif;
+    font-size: 25px;
+    color: #EA86B6;
+}
+
+.label_radio{
+    padding-left: 20px;
+}
+
+.radio-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+table, th, td{
+    border: 3px solid #EA86B6;
+    border-radius:20px;
+}
+th{
+    padding: 10px;
+}
+
+@media (max-width:830px) {
+    
+    .main-text{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .project-tile{
+        width:70%;
+    }
+
+    .result-button{
+        margin-top: 20px;
+        width: 60%;
+        aspect-ratio: 3/1;
+    }
+
+}
+
+@media (max-width:580px) {
+    
+    .result-button{
+        font-size: 18px;
+    }
+
+}
