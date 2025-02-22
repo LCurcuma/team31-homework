@@ -1,24 +1,53 @@
+//Code for assignment
 
-function getEventWeekday(/*daysLeft*/){
+function getEventWeekday(daysLeft) {
+  const now = new Date();
 
-    //If using parameters, so just comment line bellow
-    //and line with document.getElement....innerText
-    //and uncomment daysLeft parameter and the calls of the function
-    const daysLeft = parseInt(document.getElementById('days-to-event').value, 10);
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const todaysWeekday = now.getDay();
 
-    const now = new Date();
-    
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const todaysWeekday = now.getDay();
+  let eventsDay = (todaysWeekday + daysLeft) % 7;
 
-    let eventsDay = todaysWeekday + daysLeft;
-    while(eventsDay > daysOfWeek.length-1){
-        eventsDay -= 7;
-    }
+  return daysOfWeek[eventsDay];
+}
 
-    document.getElementById('eventsDay').innerText='Event will be on ' + daysOfWeek[eventsDay];
-    console.log(todaysWeekday, daysOfWeek[eventsDay]);
+// With todays weekday a tuesday
+console.log(getEventWeekday(9)); // Logs out "Thursday"
 
+// With todays weekday a Friday
+console.log(getEventWeekday(2)); // Logs out "Sunday"
+
+//Code for HTML-document
+
+function getEventWeekdayInteractiveVersion() {
+  const daysLeft = parseInt(document.getElementById("days-to-event").value, 10);
+
+  const now = new Date();
+
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const todaysWeekday = now.getDay();
+
+  let eventsDay = (todaysWeekday + daysLeft) % 7;
+
+  document.getElementById("eventsDay").innerText =
+    "Event will be on " + daysOfWeek[eventsDay];
+  console.log(todaysWeekday, daysOfWeek[eventsDay]);
 }
 
 //getEventWeekday(9);
