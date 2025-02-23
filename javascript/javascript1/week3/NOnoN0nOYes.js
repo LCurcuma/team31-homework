@@ -1,12 +1,12 @@
+console.log("---NOnoN0nOYes---");
+
 //Save a note
 
 let notes = [];
 
 function saveNote(content, id) {
-  let saveNoteObject = {};
-  saveNoteObject["content"] = content;
-  saveNoteObject["id"] = id;
-  notes.push(saveNoteObject);
+  //here were empty object and new keys, but I removed them and just pushed the objects, as were suggested
+  notes.push({ content: content, id: id });
 }
 
 saveNote("Pick up groceries", 1);
@@ -17,8 +17,10 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 //Get a note
 
 function getNote(id) {
-  if (id === "" && id === String) {
-    return Error;
+  //Now it's checking, if id is Number or not
+  if (!Number.isInteger(id)) {
+    //This returns error message and not an error
+    return "You should write an id";
   } else {
     for (let i = 0; i < notes.length; i++) {
       if (notes[i].id === id) {

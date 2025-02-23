@@ -1,3 +1,5 @@
+console.log("---Unfinished loop bug fixing---");
+
 //Bonus homework #3
 
 function createArray(number) {

@@ -1,3 +1,5 @@
+console.log("---when will we be there---");
+
 const travelInformation = {
   speed: 50,
   destinationDistance: 4329,
@@ -6,10 +8,8 @@ const travelInformation = {
 function timeForTravel(travelInformation) {
   let travelHours =
     travelInformation.destinationDistance / travelInformation.speed;
-  let travelMinutes =
-    (travelInformation.destinationDistance / travelInformation.speed -
-      parseInt(travelHours, 10)) *
-    60;
+  //instead of repeating "travelInformation.destinationDistance / travelInformation.speed" just inserted "travelHours"
+  let travelMinutes = (travelHours - parseInt(travelHours, 10)) * 60;
   if (travelHours >= 24) {
     let travelDays = travelHours / 24;
     travelHours = travelHours - parseInt(travelDays) * 24;

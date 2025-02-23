@@ -1,3 +1,5 @@
+console.log("---Series---");
+
 const seriesDurations = [
   {
     title: "Game of thrones",
@@ -27,7 +29,9 @@ const seriesDurations = [
 
 function logOutSeriesText(seriesDurations) {
   // write code here
-  const minutesIn80Years = 525600 * 80;
+  //added variable, that calculates amount of minutes in year
+  const minutesInYear = 60 * 24 * 365;
+  const minutesIn80Years = minutesInYear * 80;
   let total = 0;
 
   for (let i = 0; i < seriesDurations.length; i++) {
@@ -36,10 +40,15 @@ function logOutSeriesText(seriesDurations) {
     const hours = seriesDurations[i].hours;
     const minutes = seriesDurations[i].minutes;
 
-    const convertedDaysInHours = days * 24 + hours;
-    const convertedHoursInMinutes = convertedDaysInHours * 60 + minutes;
+    //edited naming of variables
+    const convertedDaysSpentOnSerialToHoursIncludingEnteredHours =
+      days * 24 + hours;
+    const convertedHoursSpentOnSerialToMinutesIncludingEnteredMinutes =
+      convertedDaysSpentOnSerialToHoursIncludingEnteredHours * 60 + minutes;
 
-    const percentOfLife = (convertedHoursInMinutes * 100) / minutesIn80Years;
+    const percentOfLife =
+      (convertedHoursSpentOnSerialToMinutesIncludingEnteredMinutes * 100) /
+      minutesIn80Years;
     total += percentOfLife;
     console.log(title + " took " + percentOfLife.toFixed(3) + "% of my life");
   }

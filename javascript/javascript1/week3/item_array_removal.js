@@ -1,3 +1,5 @@
+console.log("---item array removal---");
+
 const names = [
   "Peter",
   "Ahmad",
@@ -12,8 +14,10 @@ const nameToRemove = "Ahmad";
 
 // Write some code here
 for (let i = 0; i < names.length; i++) {
-  if (names[i] === "Ahmad") {
-    names.splice(i, i);
+  //removed "Ahmad" and wrote name of variable, that contains that name instead
+  if (names[i] === nameToRemove) {
+    //instead of (i, i), wrote (i, 1), so now it removes only one element
+    names.splice(i, 1);
   }
 }
 

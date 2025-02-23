@@ -1,3 +1,5 @@
+console.log("---Job-matching 2---");
+
 //Bonus homework #2
 
 function match(job, candidates) {

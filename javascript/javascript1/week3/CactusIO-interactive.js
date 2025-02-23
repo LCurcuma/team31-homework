@@ -1,3 +1,5 @@
+console.log("---CactusIO-interactive---");
+
 //Adding an activity
 
 let activities = [];
