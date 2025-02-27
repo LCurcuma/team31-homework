@@ -55,10 +55,9 @@ logOutNotesFormatted(); // should log out the text below
 //Unique feature
 
 function randomNote() {
-  const lastNumberOfArray = notes.length - 1;
-  const number = Math.round(
-    Math.random() * (notes[lastNumberOfArray].id - notes[0].id)
-  );
+  //changed the way of generating random number
+
+  const number = Math.floor(Math.random() * notes.length);
   console.log("The random id: " + (number + 1));
   console.log(
     "The note with id: " +

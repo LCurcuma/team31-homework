@@ -1,3 +1,7 @@
+//I did it! This code works! But Codewars thinks, that this code doesn't work properly.
+//It passed two tests ("should match candidates currently in a job location" and "should not match candidates when equity is desired, but not offered")
+//It didn't passed other tests ("should match candidates desire to move to a job location" and "match-random")
+
 console.log("---Job-matching 2---");
 
 //Bonus homework #2
@@ -7,47 +11,45 @@ function match(job, candidates) {
 
   let candidatesForJob = [];
 
-  for (let i = 0; i < candidates.length; i++) {
-    //This works
-    if (candidates.equity == true && job.equityMax != 0) {
-      continue;
-    } else if (candidates.equity == false && job.equityMax == 0) {
-      //But the if-statements to the locations don't work(
-      for (let a = 0; a < job.locations.length; a++) {
-        if (job.locations[a] == candidates[i].currentLocation) {
-          candidatesForJob.push(candidates[i]);
+  if (job.equityMax === 0) {
+    for (let candidate of candidates) {
+      if (!candidate.desiresEquity) {
+        if (job.locations.includes(candidate.currentLocation)) {
+          candidatesForJob.push(candidate);
+        } else if (!job.locations.includes(candidate.currentLocation)) {
+          for (let location of job.locations) {
+            if (candidate.desiredLocations.includes(location)) {
+              candidatesForJob.push(candidate);
+            }
+          }
         }
       }
-      for (let b = 0; b < candidates[i].desiredLocations.length; b++) {
-        if (job.locations[a] == candidates[i].desiredLocations[b]) {
-          candidatesForJob.push(candidates[i]);
+    }
+  } else if (job.equityMax > 0) {
+    for (let candidate of candidates) {
+      if (candidate.desiresEquity) {
+        if (job.locations.includes(candidate.currentLocation)) {
+          candidatesForJob.push(candidate);
+        } else {
+          for (let location of job.locations) {
+            if (candidate.desiredLocations.includes(location)) {
+              candidatesForJob.push(candidate);
+            }
+          }
         }
-      }
-    } else if (candidates.equity == true && equityMax != 0) {
-      for (let a = 0; a < job.locations.length; a++) {
-        if (job.locations[a] == candidates[i].currentLocation) {
-          candidatesForJob.push(candidates[i]);
-        }
-      }
-      for (let b = 0; b < candidates[i].desiredLocations.length; b++) {
-        if (job.locations[a] == candidates[i].desiredLocations[b]) {
-          candidatesForJob.push(candidates[i]);
-        }
-      }
-    } else if (candidates.equity == false && equityMax == 0) {
-      for (let a = 0; a < job.locations.length; a++) {
-        if (job.locations[a] == candidates[i].currentLocation) {
-          candidatesForJob.push(candidates[i]);
-        }
-      }
-      for (let b = 0; b < candidates[i].desiredLocations.length; b++) {
-        if (job.locations[a] == candidates[i].desiredLocations[b]) {
-          candidatesForJob.push(candidates[i]);
+      } else if (!candidate.desiresEquity) {
+        if (job.locations.includes(candidate.currentLocation)) {
+          candidatesForJob.push(candidate);
+        } else {
+          for (let location of job.locations) {
+            if (candidate.desiredLocations.includes(location)) {
+              candidatesForJob.push(candidate);
+            }
+          }
         }
       }
     }
   }
-
   console.log(candidatesForJob);
 }
 
@@ -68,3 +70,21 @@ let job1 = { equityMax: 0, locations: ["Los Angeles", "New York"] },
 
 match(job1, candidates); //First call should return an empty array (and it does)
 match(job2, candidates); //Second call should return two candidates
+
+let testCandidates = [
+  {
+    desiresEquity: true,
+    currentLocation: "New York",
+    desiredLocations: ["San Francisco", "Los Angeles"],
+  },
+  {
+    desiresEquity: false,
+    currentLocation: "San Francisco",
+    desiredLocations: ["Kentucky", "New Mexico"],
+  },
+];
+let testJob1 = { equityMax: 0, locations: ["Los Angeles", "New York"] },
+  testJob2 = { equityMax: 1.2, locations: ["New York", "Kentucky"] };
+
+match(testJob1, testCandidates); //First call should return an empty array (and it does)
+match(testJob2, testCandidates); //Second call should return two candidates

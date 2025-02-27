@@ -11,7 +11,7 @@ const options = {
   day: "numeric",
 };
 
-function addActivity(date, activity, duration) {
+function addActivity(activity, duration) {
   //Usage limit
 
   const limit = 5;
@@ -21,22 +21,19 @@ function addActivity(date, activity, duration) {
   } else {
     let addedActivities = {};
 
-    console.log(today.toLocaleDateString("en-US", options));
-
     //I edited that string because of optional exercise, but at first it was
     //addedActivities["date"] = date;
 
-    addedActivities["date"] = today.toLocaleDateString("en-US", options);
-    addedActivities["activity"] = activity;
-    addedActivities["duration"] = duration;
-
-    activities.push(addedActivities);
-    console.log(addedActivities["date"]);
+    activities.push({
+      date: today.toLocaleDateString("en-US", options),
+      activity: activity,
+      duration: duration,
+    });
   }
 }
 
 showStatus(activities);
-addActivity("23/7-18", "Youtube", 30);
+addActivity("Youtube", 30);
 
 /*
 activities should now look like this
@@ -54,7 +51,7 @@ function showStatus(activities) {
     console.log("Add some activities before calling showStatus");
   } else {
     let totalTime = 0;
-    let activitiesLength = 0;
+    let activitiesToday = 0;
 
     for (let i = 0; i < activities.length; i++) {
       if (activities[i].date !== today.toLocaleDateString("en-US", options)) {
@@ -62,21 +59,21 @@ function showStatus(activities) {
       }
 
       totalTime += activities[i].duration;
-      activitiesLength++;
+      activitiesToday++;
     }
 
-    if (activitiesLength === 1) {
+    if (activitiesToday === 1) {
       console.log(
         "You have added " +
-          activitiesLength +
+          activitiesToday +
           " activity. It amount to " +
           totalTime +
           " min. of usage"
       );
-    } else {
+    } else if (activitiesToday > 1) {
       console.log(
         "You have added " +
-          activitiesLength +
+          activitiesToday +
           " activities. They amount to " +
           totalTime +
           " min. of usage"
@@ -86,15 +83,15 @@ function showStatus(activities) {
 }
 
 showStatus(activities);
-addActivity("18/2-25", "Facebook", 20);
+addActivity("Facebook", 20);
 showStatus(activities);
-addActivity("18/2-25", "Instagram", 50);
+addActivity("Instagram", 50);
 showStatus(activities);
-addActivity("18/2-25", "Reading a book", 80);
+addActivity("Reading a book", 80);
 showStatus(activities);
-addActivity("18/2-25", "Scrolling news", 10);
+addActivity("Scrolling news", 10);
 showStatus(activities);
-addActivity("18/2-25", "Internet-shopping", 70);
+addActivity("Internet-shopping", 70);
 showStatus(activities);
 
 //Extra feature
@@ -124,25 +121,25 @@ giveIdeaForWhatToDo();
 //Calculating the activity a user has spent the most time on
 
 function showTheBiggestActivity() {
+  let indexOfBiggestDuration = 0;
   let biggestDuration = 0;
+
+  //removed the second loop by tracking index of the biggest duration
 
   for (let i = 0; i < activities.length; i++) {
     if (biggestDuration < activities[i].duration) {
+      indexOfBiggestDuration = i;
       biggestDuration = activities[i].duration;
     }
   }
 
-  for (let i = 0; i < activities.length; i++) {
-    if (activities[i].duration === biggestDuration) {
-      console.log(
-        "You have spent the most time on " +
-          activities[i].activity +
-          ": " +
-          biggestDuration +
-          " min"
-      );
-    }
-  }
+  console.log(
+    "You have spent the most time on " +
+      activities[indexOfBiggestDuration].activity +
+      ": " +
+      biggestDuration +
+      " min"
+  );
 }
 
 showTheBiggestActivity();

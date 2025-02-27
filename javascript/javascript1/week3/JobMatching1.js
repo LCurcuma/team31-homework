@@ -6,14 +6,14 @@ function match(candidate, job) {
   // is this job a valid match for the candidate?
 
   const maxSalary = job.maxSalary + (candidate.minSalary * 10) / 100;
-  if (candidate.minSalary === undefined) {
-    throw Error;
-  } else if (job.maxSalary === undefined) {
-    throw Error;
+  if (candidate.minSalary === undefined || job.maxSalary === undefined) {
+    throw new Error(
+      "Write desired maximum Salary or/and minimum Salary, that company can provide to workers"
+    );
   } else if (candidate.minSalary <= maxSalary) {
-    return true;
-  } else if (candidate.minSalary >= maxSalary) {
-    return false;
+    return candidate.minSalary <= maxSalary;
+  } else if (candidate.minSalary > maxSalary) {
+    return candidate.minSalary > maxSalary;
   }
 }
 
