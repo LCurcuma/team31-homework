@@ -1,19 +1,18 @@
 console.log("-----Vowel count-----");
 
 function showNumberOfVowels(string) {
-  let vowelLetters = ["a", "e", "i", "o", "u"];
-  let arrayWithVowelLettersFromString = [];
-  let arrayOfWords = string.split(" ");
+  const vowelLetters = ["a", "e", "i", "o", "u"];
+  let vowelCount = 0;
 
-  for (let word of arrayOfWords) {
-    for (let letter of word) {
-      if (vowelLetters.includes(letter)) {
-        arrayWithVowelLettersFromString.push(letter);
+  for (let letter of string.toLowerCase()) {
+    for (let vowel of vowelLetters) {
+      if (letter === vowel) {
+        vowelCount++;
       }
     }
   }
 
-  return arrayWithVowelLettersFromString.length;
+  return vowelCount;
 }
 
 console.log(showNumberOfVowels("hello world"));

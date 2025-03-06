@@ -1,20 +1,13 @@
 console.log("-----Square every digit-----");
 
 function squareEveryDigit(numbers) {
-  let arrayOfDigits = numbers.toString().split("").map(Number);
-  let arrayOfSquares = [];
-  let result = "";
+  let newNumber = '';
 
-  for (let digit of arrayOfDigits) {
-    arrayOfSquares.push(Math.pow(digit, 2));
+  for (let number of String(numbers)) {
+    newNumber += Math.pow(parseInt(number), 2);
   }
 
-  for (let square of arrayOfSquares) {
-    square = square.toString();
-    result += square;
-  }
-
-  return result;
+  return parseInt(newNumber);
 }
 
 console.log(squareEveryDigit(9119));

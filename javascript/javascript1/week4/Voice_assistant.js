@@ -11,7 +11,8 @@ const commands = [
   "Set a timer for",
   "Give me random fact",
 ];
-let todo = [];
+//it isn't const because we will add new things here
+const todo = [];
 const facts = [
   'In Britain, saying "Good morning, Mr. Magpie, how\'s your wife?" to a lone magpie is a way to avoid bad luck.',
   "According to Polish superstition, would-be bakers should stay standing the entire time their cakes are in the oven.",
@@ -151,11 +152,11 @@ const facts = [
   "Stripey things like escalators and Venetian blinds can cause migraines.",
   "The US army has its own private herd of bison.",
 ];
-
+//It is used for checking, if there were one or more commands
 let usersCommands = [];
 let name = "";
 
-//main function
+//the function, that gets command and gives a reply
 function getReply(command) {
   const lastWordOfString = command.lastIndexOf(" ");
   const commandWithoutLastWord = command.substring(0, lastWordOfString);
@@ -163,67 +164,70 @@ function getReply(command) {
   const twoWordsFromCommand = splittedCommand.slice(0, 2).join(" ");
   const commandWithoutTwoLastWords = splittedCommand.slice(0, 4).join(" ");
 
+  //"Hello my name is"
   if (commandWithoutLastWord === commands[0]) {
+    //if the first command was already used, it says "Hi again", else - logs string "Hello, [name of person]" and saves name
+    //it also pushes inserted commands into usersCommands, so that's why it can check, if command was used
     if (usersCommands.includes(command)) {
       usersCommands.push(command);
 
-      return "Hi again :)";
+      console.log("Hi again :)");
     } else {
       usersCommands.push(command);
 
-      return sayHello(command);
+      console.log(sayHello(command));
     }
+    //"What is my name"
   } else if (command === commands[1]) {
-    if (name == "") {
-      usersCommands.push(command);
-
-      return "Sorry, I don't know your name";
+    //if there's no name saved, this command logs "Sorry...", but if name is saved, so it logs "Your name is [name]"
+    if (name === "") {
+      console.log("Sorry, I don't know your name");
     } else {
-      usersCommands.push(command);
-
-      return "Your name is " + name;
+      console.log("Your name is " + name);
     }
-  } else if (splittedCommand[0] === "Add") {
-    usersCommands.push(command);
+    //"Add *something* to my todo"
+    //command is splitted in splittedCommand, so we're checking, if there's "Add" word
+  } else if (splittedCommand[0] == "Add") {
     let todoItem = addItemToToDo(splittedCommand);
 
-    return todoItem + " added to your todo";
-  } else if (splittedCommand[0] === "Remove") {
-    usersCommands.push(command);
+    console.log(todoItem + " added to your todo");
+    //"Remove *something* from my todo"
+  } else if (splittedCommand[0] == "Remove") {
     todoItem = takeItemToTodoList(splittedCommand);
-
+    //checking, if todo-list has item
     if (todo.includes(todoItem)) {
+      //this loop is for taking index of todoItem and deleting this item with this index
       for (let i = 0; i < todo.length; i++) {
         if (todo[i] == todoItem) {
           todo.splice(i, 1);
         }
       }
 
-      return "Removed " + todoItem + " from your todo";
+      console.log("Removed " + todoItem + " from your todo");
     } else {
-      return "There's no " + todoItem;
+      console.log("There's no " + todoItem);
     }
+    //"What is in my todo?"
   } else if (command === commands[4]) {
-    usersCommands.push(command);
-    if (todo.length == 0) {
-      return "You don't have any item in your todo";
+    if (!todo.length) {
+      console.log("You don't have any item in your todo");
     } else {
-      return todo;
+      console.log(todo);
     }
+    //"What day is it today?"
   } else if (command === commands[5]) {
-    usersCommands.push(command);
-
-    return takeCurrentDate();
+    console.log(takeCurrentDate());
+    //"what is [2+2 or other]"
   } else if (twoWordsFromCommand === commands[6]) {
-    usersCommands.push(command);
     splittedCommand = splittedCommand.splice(2);
 
-    return calculatedResult(splittedCommand);
-  } else if (commandWithoutTwoLastWords == commands[7]) {
-    usersCommands.push(command);
+    console.log(calculatedResult(splittedCommand));
+    //"Set timer for [amount of time]"
+  } else if (commandWithoutTwoLastWords === commands[7]) {
+    //removing 'Set timer for' part, so we will have only amount of time
     splittedCommand = splittedCommand.splice(4);
-
-    if (splittedCommand[1] == "second" || splittedCommand[1] == "seconds") {
+    //checking, if time is second/minute/hour/day
+    if (splittedCommand[1] === "second" || splittedCommand[1] === "seconds") {
       const amountOfTime = parseInt(splittedCommand[0]) * 1000;
 
       console.log("Timer set for " + splittedCommand.join(" "));
@@ -232,8 +236,8 @@ function getReply(command) {
         console.log("Timer done");
       }, amountOfTime);
     } else if (
-      splittedCommand[1] == "minute" ||
-      splittedCommand[1] == "minutes"
+      splittedCommand[1] === "minute" ||
+      splittedCommand[1] === "minutes"
     ) {
       console.log("Timer set for " + splittedCommand.join(" "));
       const amountOfTime = parseInt(splittedCommand[0]) * 60000;
@@ -241,14 +245,17 @@ function getReply(command) {
       setTimeout(() => {
         console.log("Timer done");
       }, amountOfTime);
-    } else if (splittedCommand[1] == "hour" || splittedCommand[1] == "hours") {
+    } else if (
+      splittedCommand[1] === "hour" ||
+      splittedCommand[1] === "hours"
+    ) {
       console.log("Timer set for " + splittedCommand.join(" "));
       const amountOfTime = parseInt(splittedCommand[0]) * 3600000;
 
       setTimeout(() => {
         console.log("Timer done");
       }, amountOfTime);
-    } else if (splittedCommand[1] == "day" || splittedCommand[i] == "days") {
+    } else if (splittedCommand[1] === "day" || splittedCommand[i] === "days") {
       console.log("Timer set for " + splittedCommand.join(" "));
       const amountOfTime = parseInt(splittedCommand[0]) * 86400000;
 
@@ -256,15 +263,15 @@ function getReply(command) {
         console.log("Timer done");
       }, amountOfTime);
     }
-  } else if (command == commands[8]) {
-    usersCommands.push(command);
+    //"Give me a random fact"
+  } else if (command === commands[8]) {
     const randomIndex = Math.floor(Math.random() * (facts.length - 1));
 
-    return facts[randomIndex];
+    console.log(facts[randomIndex]);
   }
 }
 
-//function for the first command
+//function for the first command, that takes name of user
 function sayHello(command) {
   command = command.split(" ");
   name = command.pop();
@@ -319,33 +326,34 @@ function calculatedResult(splittedCommand) {
   let result = parseInt(splittedCommand[0]);
 
   for (let i = 0; i < splittedCommand.length; i++) {
-    if (splittedCommand[i] == "+") {
+    if (splittedCommand[i] === "+") {
       result += parseInt(splittedCommand[i + 1]);
-    } else if (splittedCommand[i] == "-") {
+    } else if (splittedCommand[i] === "-") {
       result -= parseInt(splittedCommand[i + 1]);
-    } else if (splittedCommand[i] == "*") {
+    } else if (splittedCommand[i] === "*") {
       result *= parseInt(splittedCommand[i + 1]);
-    } else if (splittedCommand[i] == "/") {
+    } else if (splittedCommand[i] === "/") {
       result /= parseInt(splittedCommand[i + 1]);
     }
   }
   return result;
 }
 
-console.log(getReply("What is my name"));
-console.log(getReply("Hello my name is Nadiia"));
-console.log(getReply("Hello my name is Nadiia"));
-console.log(getReply("What is my name"));
-console.log(getReply("Add fishing to my todo"));
-console.log(getReply("What is on my todo?"));
-console.log(getReply("Add singing in the shower to my todo"));
-console.log(getReply("What is on my todo?"));
-console.log(getReply("Remove fishing from my todo"));
-console.log(getReply("What is on my todo?"));
-console.log(getReply("Remove singing in the shower from my todo"));
-console.log(getReply("What is on my todo?"));
-console.log(getReply("What day is it today?"));
-console.log(getReply("what is 3 + 3"));
-console.log(getReply("what is 4 * 12"));
+//now they all unwrapped from console.log
+getReply("What is my name");
+getReply("Hello my name is Nadiia");
+getReply("Hello my name is Nadiia");
+getReply("What is my name");
+getReply("Add fishing to my todo");
+getReply("What is on my todo?");
+getReply("Add singing in the shower to my todo");
+getReply("What is on my todo?");
+getReply("Remove fishing from my todo");
+getReply("What is on my todo?");
+getReply("Remove singing in the shower from my todo");
+getReply("What is on my todo?");
+getReply("What day is it today?");
+getReply("what is 3 + 3");
+getReply("what is 4 * 12");
 getReply("Set a timer for 30 seconds");
-console.log(getReply("Give me random fact"));
+getReply("Give me random fact");
