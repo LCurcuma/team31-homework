@@ -1,0 +1,68 @@
+/*https://vocal-cannoli-85e9ae.netlify.app*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
+  height: 300px;
+  background-image: url("card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card_is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card_changed-color {
+  animation-name: from_front_to_back;
+  animation-duration: 1s;
+}
+
+.card_changed-color_2 {
+  animation-name: from_front_to_back_2;
+  animation-duration: 1s;
+}
+
+.card_flipped {
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
+  height: 300px;
+  background-image: url("card_kovra.png");
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+@keyframes from_front_to_back {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes from_front_to_back_2 {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
