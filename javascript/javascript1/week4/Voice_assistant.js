@@ -11,7 +11,6 @@ const commands = [
   "Set a timer for",
   "Give me random fact",
 ];
-//it isn't const because we will add new things here
 const todo = [];
 const facts = [
   'In Britain, saying "Good morning, Mr. Magpie, how\'s your wife?" to a lone magpie is a way to avoid bad luck.',
