@@ -101,7 +101,7 @@ sortedDesk.forEach((card) => {
     });
 }
 
-function resetTheAmountOfCards(){
+function restartTheAmountOfCards(){
   cardsOpened.length = 0;
   console.log(cardsOpened);
 }
