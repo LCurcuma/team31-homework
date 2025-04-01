@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory game</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Netlify deployment: https://frabjous-sherbet-cea3fd.netlify.app-->
+  </head>
+  <body>
+    <div id="start_menu" class="start_menu">
+      <label for="levels">Choose level</label>
+      <input
+        type="range"
+        id="levels"
+        min="0"
+        max="5"
+        class="level_range"
+        value="0"
+      />
+      <button id="start_game" onclick="settingDesk()" class="starting_button">
+        Start game
+      </button>
+    </div>
+
+    <div id="desk" class="desk"></div>
+    <script src="cards.js"></script>
+    <script src="week2.js"></script>
+  </body>
+</html>

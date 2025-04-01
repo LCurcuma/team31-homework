@@ -30,6 +30,7 @@ function settingDesk() {
     case "5":
       setDesk(cards.length);
       break;
+
   }
 }
 
@@ -38,12 +39,14 @@ function setDesk(amountOfCards) {
   amountOfCardsOnTheDesk = amountOfCards * 2;
   //showing container with count
   countContainer.removeAttribute("style");
+
   //pushing cards to desk
   pushingCardsToDesk(amountOfCards, cards);
   //shuffling cards
   const sortedDesk = desk.sort(() => {
     return 0.5 - Math.random();
   });
+
   //creating cards, setting attributes and setting event listener
   sortedDesk.forEach((card) => {
     const deskCard = document.createElement("div");
@@ -66,13 +69,16 @@ function setDesk(amountOfCards) {
           "card_flipped card_is-flipped card_changed-color card_not_faded";
         //checking, if there are two cards opened
         checkAmountOfCardsOpened(cardsOpened, deskCard);
+
       } else if (
         deskCard.className ===
         "card_flipped card_is-flipped card_changed-color card_not_faded"
       ) {
         deskCard.removeAttribute("style");
         deskCard.className = "card card_changed-color_2";
+
         restartTheAmountOfCards();
+
       } else if (deskCard.className === "card card_changed-color_2") {
         countFlipping();
         deskCard.setAttribute(
@@ -82,6 +88,7 @@ function setDesk(amountOfCards) {
         deskCard.className =
           "card_flipped card_is-flipped card_changed-color card_not_faded";
         //checking, if there are two cards opened
+
         checkAmountOfCardsOpened(cardsOpened, deskCard);
       }
     });
@@ -168,6 +175,7 @@ function startTimer(count) {
       clearInterval(timerForSeconds);
     }
   }
+
 }
 
 //function, that counts amount of flips
@@ -200,7 +208,9 @@ function restartingGame() {
 
 
 
+
 //EasterEgg function (I will draw a bunch of cards... Again)
+
 function setEasterDesk() {
   const password = document.getElementById("password").value;
 
@@ -215,13 +225,17 @@ function settingEasterDesk() {
   seconds = 0;
   minutes = 0;
 
+
+
   endingMenu.setAttribute("style", "display:none;");
   easterMenu.setAttribute("style", "display:none;");
   amountOfCardsOnTheDesk = easterCards.length;
   //showing container with count
   countContainer.removeAttribute("style");
 
+
   pushingCardsToDesk(easterCards.length, easterCards);
+
 
   //shuffling cards
   const sortedDesk = desk.sort(() => {
@@ -230,6 +244,7 @@ function settingEasterDesk() {
 
   //creating cards, setting attributes and setting event listener
   sortedDesk.forEach((card) => {
+
     const deskCard = document.createElement("div");
     //deskCard.setAttribute("title", card.name);
     deskCard.setAttribute("class", "card");
@@ -250,12 +265,14 @@ function settingEasterDesk() {
           "card_flipped card_is-flipped card_changed-color card_not_faded";
         //checking, if there are two cards opened
         checkAmountOfCardsOpened(cardsOpened, deskCard);
+
       } else if (
         deskCard.className ===
         "card_flipped card_is-flipped card_changed-color card_not_faded"
       ) {
         deskCard.removeAttribute("style");
         deskCard.className = "card card_changed-color_2";
+
         restartTheAmountOfCards();
       } else if (deskCard.className === "card card_changed-color_2") {
         countFlipping();
@@ -266,7 +283,9 @@ function settingEasterDesk() {
         deskCard.className =
           "card_flipped card_is-flipped card_changed-color card_not_faded";
         //checking, if there are two cards opened
+
         checkAmountOfCardsOpened(cardsOpened, deskCard);
+
       }
     });
   });
