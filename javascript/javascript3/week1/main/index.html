@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Starting menu-->
+    <div id="start_menu" class="start_menu">
+      <label for="levels">Choose level</label>
+      <input
+        type="range"
+        id="levels"
+        min="0"
+        max="5"
+        class="level_range"
+        value="0"
+      />
+      <button
+        id="start_game"
+        class="starting_button"
+      >
+        Start game
+      </button>
+    </div>
+
+    <!--Steps counter and timer-->
+    <div id="count_container" class="steps_count">
+      <div class="count">
+        <p>Steps:</p>
+        <p id="count">0</p>
+      </div>
+      <div class="timer">
+        <p id="minutes">00</p>
+        <p>:</p>
+        <p id="seconds">00</p>
+      </div>
+    </div>
+
+    <!--Ending game menu-->
+    <div id="restart" class="start_menu" style="display: none">
+      <p>Congratulations!<br>You passed the level!</p>
+      <button class="starting_button" onclick="restartingGame()">
+        Restart
+      </button>
+    </div>
+
+    <!--Container for shuffled desk with cards-->
+    <div id="desk" class="desk"></div>
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
