@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory game</title>
     <link rel="stylesheet" href="style.css" />
-    <!--Netlify deployment: https://precious-vacherin-483600.netlify.app-->
   </head>
   <body>
     <!--Starting menu-->
@@ -21,7 +20,6 @@
       />
       <button
         id="start_game"
-        onclick="settingDesk()"
         class="starting_button"
       >
         Start game
@@ -43,24 +41,15 @@
 
     <!--Ending game menu-->
     <div id="restart" class="start_menu" style="display: none">
-      <p>Congratulations! You passed the level!</p>
+      <p>Congratulations!<br>You passed the level!</p>
       <button class="starting_button" onclick="restartingGame()">
         Restart
       </button>
     </div>
 
-    <!--Secret menu-->
-    <div id="easter" class="start_menu" style="display:none;">
-      <p>Enter the password</p>
-      <textarea id="password" class="password_textarea"></textarea>
-      <button onclick="setEasterDesk()">Enter password</button>
-    </div>
-
     <!--Container for shuffled desk with cards-->
     <div id="desk" class="desk"></div>
-    <script src="cards.js"></script>
-    <script src="easter_cards.js"></script>
-    <script src="main.js"></script>
     <script src="functions.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

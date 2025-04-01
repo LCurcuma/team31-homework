@@ -1,4 +1,4 @@
-/*https://vocal-cannoli-85e9ae.netlify.app*/
+
 
 * {
   margin: 0;
@@ -6,12 +6,77 @@
   box-sizing: border-box;
 }
 
-.card {
+@font-face {
+  font-family: 'Abel';
+  src: url('Abel-Regular.ttf');
+}
+
+body{
+  font-family: 'Abel';
+  background-color: #FFDECF;
+}
+
+.start_menu {
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #552D2D;
+  font-size: 45px;
+  gap: 10px;
+  color:#FFDECF;
+}
+
+.starting_button {
+  width: 130px;
+  height: 55px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #FFDECF;
+  color:#552D2D;
+  border: none;
+  font-size: 20px;
+}
+
+.level_range {
+  width: 300px;
+  height: 100px;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+}
+
+.level_range::-webkit-slider-runnable-track {
+  background-color:#FFDECF;
+  height: 15px;
+  border-radius: 20px;
+}
+
+.level_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.card_2{
   border-radius: 20px;
   margin: auto;
-  margin-top: 50px;
-  width: 200px;
-  height: 300px;
+  margin-top: 20vh;
+  width: 250px;
+  aspect-ratio: 1/1.5;
   background-image: url("cards/card_back.png");
   background-position: center;
   background-size: cover;
@@ -19,6 +84,77 @@
   transform-style: preserve-3d;
   transition: transform 1s;
 }
+
+.card_4{
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 210px;
+  aspect-ratio: 1/1.5;
+  background-image: url("cards/card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card_6{
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-right: 5px;
+  width: 160px;
+  aspect-ratio: 1/1.5;
+  background-image: url("cards/card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card_8{
+  border-radius: 20px;
+  margin-top: 100px;
+  margin-right: 5px;
+  width: 120px;
+  aspect-ratio: 1/1.5;
+  background-image: url("cards/card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card_10{
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 5px;
+  width: 120px;
+  aspect-ratio: 1/1.5;
+  background-image: url("cards/card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card_13{
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-right: 5px;
+  width: 110px;
+  aspect-ratio: 1/1.5;
+  background-image: url("cards/card_back.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
 .card_is-flipped {
   transform: rotateY(180deg);
 }
@@ -33,12 +169,12 @@
   animation-duration: 1s;
 }
 
-.card_flipped {
+.card_flipped_2 {
   border-radius: 20px;
   margin: auto;
-  margin-top: 50px;
-  width: 200px;
-  height: 300px;
+  margin-top: 20vh;
+  width: 250px;
+  aspect-ratio: 1/1.5;
   background-position: center;
   background-size: cover;
 
@@ -48,6 +184,87 @@
   transition: transform 1s;
   transform: rotateY(180deg);
 }
+
+.card_flipped_4 {
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 210px;
+  aspect-ratio: 1/1.5;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.card_flipped_6 {
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-right: 5px;
+  width: 160px;
+  aspect-ratio: 1/1.5;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.card_flipped_8 {
+  border-radius: 20px;
+  margin-top: 100px;
+  margin-right: 5px;
+  width: 120px;
+  aspect-ratio: 1/1.5;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.card_flipped_10 {
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 5px;
+  width: 120px;
+  aspect-ratio: 1/1.5;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.card_flipped_13 {
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-right: 5px;
+  width: 110px;
+  aspect-ratio: 1/1.5;
+  background-position: center;
+  background-size: cover;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
 @keyframes from_front_to_back {
   0% {
     opacity: 0%;
@@ -66,62 +283,13 @@
   }
 }
 
-.start_menu {
-  width: 600px;
-  height: 400px;
-  border-radius: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-  font-size: 25px;
-  gap: 10px;
-}
-
-.level_range {
-  width: 300px;
-  height: 100px;
-
-  appearance: none;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  -webkit-appearance: none;
-}
-
-.level_range::-webkit-slider-runnable-track {
-  background-color: aquamarine;
-  height: 10px;
-}
-
-.level_range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-
-  margin-top: -5.5px;
-
-  height: 20px;
-  width: 20px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.starting_button {
-  width: 130px;
-  height: 55px;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
 .desk {
+  padding-top:20px;
   margin: auto;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   width: 70%;
 }
 
@@ -136,8 +304,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: blue;
-  color: white;
+  background-color: #552D2D;
+  color: #FFDECF;
   font-size: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -159,13 +327,4 @@
 .card_fade{
   transition: opacity 0.5s;
   opacity: 0;
-}
-
-.password_textarea{
-  margin-top: 20px;
-  width: 130px;
-  height: 55px;
-  border-radius: 25px;
-  text-align: center;
-  font-size: 20px;
 }

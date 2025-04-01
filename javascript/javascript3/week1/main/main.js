@@ -3,8 +3,6 @@
 const startingMenu = document.getElementById("start_menu");
 const deskMenu = document.getElementById("desk");
 const endingMenu = document.getElementById('restart');
-const easterMenu = document.getElementById('easter');
-
 
 //desk with cards
 const desk = [];
@@ -28,9 +26,9 @@ let cardsOpened = [];
 
 //amount of cards on desk
 let amountOfCardsOnTheDesk = 0;
-
+const startingButton = document.querySelector('#start_game');
 const restartingButton = document.getElementById('restart');
 
-restartingButton.addEventListener('contextmenu', function(){
-    easterMenu.removeAttribute('style');
-});
+startingButton.addEventListener('click', settingDesk);
+
+restartingButton.addEventListener('click', restartingGame);
