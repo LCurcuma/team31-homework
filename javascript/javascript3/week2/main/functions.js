@@ -1,8 +1,10 @@
 const takingData = async () => {
-  const response = await fetch("https://raw.githubusercontent.com/LCurcuma/LCurcuma.github.io/refs/heads/main/js3/cards.json");
+  const response = await fetch(
+    "https://raw.githubusercontent.com/LCurcuma/LCurcuma.github.io/refs/heads/main/js3/cards.json"
+  );
   const cards = await response.json();
   return cards;
-}
+};
 
 //function for setting desk
 
@@ -48,67 +50,76 @@ function setDesk(amountOfCards) {
   //showing container with count
   countContainer.removeAttribute("style");
 
-  takingData()
-    .then((cards) => {
-      console.log(cards);
-      console.log(cards[0]);
+  takingData().then((cards) => {
+    console.log(cards);
+    console.log(cards[0]);
 
-      //pushing cards to desk
-      pushingCardsToDesk(amountOfCards, cards);
+    //pushing cards to desk
+    pushingCardsToDesk(amountOfCards, cards);
 
-      //shuffling cards
-      const sortedDesk = desk.sort(() => {
-        return 0.5 - Math.random();
-      });
+    //shuffling cards
+    const sortedDesk = desk.sort(() => {
+      return 0.5 - Math.random();
+    });
 
-      //creating cards, setting attributes and setting event listener
-      sortedDesk.forEach((card) => {
-        const deskCard = document.createElement("div");
+    //creating cards, setting attributes and setting event listener
+    sortedDesk.forEach((card) => {
+      const deskCard = document.createElement("div");
 
-        //deskCard.setAttribute("title", card.name);
-        deskCard.setAttribute("class", "card_" + amountOfCards);
-        deskCard.setAttribute("id", card.id);
-        deskMenu.appendChild(deskCard);
+      //deskCard.setAttribute("title", card.name);
+      deskCard.setAttribute("class", "card_" + amountOfCards);
+      deskCard.setAttribute("id", card.id);
+      deskMenu.appendChild(deskCard);
 
-        deskCard.addEventListener("click", () => {
+      deskCard.addEventListener("click", () => {
 
-          //starts timer
-          startTimer(count);
-          if (deskCard.className === "card_" + amountOfCards) {
+        //starts timer
+        startTimer(count);
+        if (deskCard.className === "card_" + amountOfCards) {
 
-            //count flip
-            countFlipping();
-            deskCard.setAttribute(
-              "style",
-              'background-image: url("' + card.url + '")'
-            );
-            deskCard.className =
-              "card_flipped_" + amountOfCards + " card_is-flipped card_changed-color card_not_faded";
+          //count flip
+          countFlipping();
+          deskCard.setAttribute(
+            "style",
+            'background-image: url("' + card.url + '")'
+          );
+          deskCard.className =
+            "card_flipped_" +
+            amountOfCards +
+            " card_is-flipped card_changed-color card_not_faded";
 
-            //checking, if there are two cards opened
-            checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
-          } else if (
-            deskCard.className ===
-            "card_flipped_" + amountOfCards + " card_is-flipped card_changed-color card_not_faded"
-          ) {
-            deskCard.removeAttribute("style");
-            deskCard.className = "card_" + amountOfCards + " card_changed-color_2";
-            resetTheAmountOfCards();
-          } else if (deskCard.className === "card_" + amountOfCards + " card_changed-color_2") {
-            countFlipping();
-            deskCard.setAttribute(
-              "style",
-              'background-image: url("' + card.url + '");'
-            );
-            deskCard.className =
-              "card_flipped_" + amountOfCards +" card_is-flipped card_changed-color card_not_faded";
+          //checking, if there are two cards opened
+          checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
+        } else if (
+          deskCard.className ===
+          "card_flipped_" +
+            amountOfCards +
+            " card_is-flipped card_changed-color card_not_faded"
+        ) {
+          deskCard.removeAttribute("style");
+          deskCard.className =
+            "card_" + amountOfCards + " card_changed-color_2";
+          resetTheAmountOfCards();
+        } else if (
+          deskCard.className ===
+          "card_" + amountOfCards + " card_changed-color_2"
+        ) {
+          countFlipping();
+          deskCard.setAttribute(
+            "style",
+            'background-image: url("' + card.url + '");'
+          );
+          deskCard.className =
+            "card_flipped_" +
+            amountOfCards +
+            " card_is-flipped card_changed-color card_not_faded";
 
-            //checking, if there are two cards opened
-            checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
-          }
-        });
+          //checking, if there are two cards opened
+          checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
+        }
       });
     });
+  });
 }
 
 function resetTheAmountOfCards() {
@@ -131,7 +142,9 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
         }
         cardsOpened.length = 0;
         console.log(cardsOpened);
-        const deskCardsToRemove = document.querySelectorAll(".card_flipped_" + amountOfCards);
+        const deskCardsToRemove = document.querySelectorAll(
+          ".card_flipped_" + amountOfCards
+        );
         deskCardsToRemove.forEach(function (card) {
           card.classList.add("card_fade");
           setTimeout(function () {
@@ -141,7 +154,9 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
       } else {
         cardsOpened.length = 0;
         console.log(cardsOpened);
-        const deskCardsToHide = document.querySelectorAll(".card_flipped_" + amountOfCards);
+        const deskCardsToHide = document.querySelectorAll(
+          ".card_flipped_" + amountOfCards
+        );
         deskCardsToHide.forEach(function (card) {
           card.className = "card_" + amountOfCards;
           card.removeAttribute("style");
@@ -165,7 +180,7 @@ function pushingCardsToDesk(amountOfCards, cards) {
 }
 
 function startTimer(count) {
-
+  
   //starting timer
   if (count === 0) {
     const timerForSeconds = setInterval(function () {
@@ -189,7 +204,7 @@ function startTimer(count) {
         timerMinutes.innerText = minutes;
       }
     }, 60000);
-    if(amountOfCardsOnTheDesk <= 0){
+    if (amountOfCardsOnTheDesk <= 0) {
       clearInterval(timerForMinutes);
       clearInterval(timerForSeconds);
     }
@@ -205,11 +220,10 @@ function countFlipping() {
 //function for ending of game
 function endGame() {
   desk.length = 0;
-  setTimeout(()=>{
+  setTimeout(() => {
     endingMenu.removeAttribute("style");
     countContainer.setAttribute("style", "display: none;");
   }, 1000);
-  
 }
 
 //function for restarting the game
