@@ -8,6 +8,8 @@
     <!--Netlify deployment: https://precious-vacherin-483600.netlify.app-->
   </head>
   <body>
+
+    <!--Starting menu-->
     <div id="start_menu" class="start_menu">
       <label for="levels">Choose level</label>
       <input
@@ -27,6 +29,8 @@
       </button>
     </div>
 
+
+    <!--Steps counter and timer-->
     <div id="count_container" class="steps_count">
       <div class="count">
         <p>Steps:</p>
@@ -39,6 +43,8 @@
       </div>
     </div>
 
+
+    <!--Ending game menu-->
     <div id="restart" class="start_menu" style="display: none">
       <p>Congratulations! You passed the level!</p>
       <button class="starting_button" onclick="restartingGame()">
@@ -46,12 +52,15 @@
       </button>
     </div>
 
+
+    <!--Secret menu-->
     <div id="easter" class="start_menu" style="display:none;">
       <p>Enter the password</p>
       <textarea id="password" class="password_textarea"></textarea>
       <button onclick="setEasterDesk()">Enter password</button>
     </div>
 
+    <!--Container for shuffled desk with cards-->
     <div id="desk" class="desk"></div>
     <script src="cards.js"></script>
     <script src="easter_cards.js"></script>
