@@ -44,87 +44,84 @@ function settingDesk() {
 }
 
 //function for setting desk with some amount of cards
-function setDesk(amountOfCards) {
+async function setDesk(amountOfCards) {
   amountOfCardsOnTheDesk = amountOfCards * 2;
 
   //showing container with count
   countContainer.removeAttribute("style");
 
-  takingData().then((cards) => {
-    console.log(cards);
-    console.log(cards[0]);
+  const cards = await takingData();
 
-    //pushing cards to desk
-    pushingCardsToDesk(amountOfCards, cards);
+  //pushing cards to desk
+  pushingCardsToDesk(amountOfCards, cards);
 
-    //shuffling cards
-    const sortedDesk = desk.sort(() => {
-      return 0.5 - Math.random();
-    });
+  //shuffling cards
+  const sortedDesk = desk.sort(() => {
+    return 0.5 - Math.random();
+  });
 
-    //creating cards, setting attributes and setting event listener
-    sortedDesk.forEach((card) => {
-      const deskCard = document.createElement("div");
+  //creating cards, setting attributes and setting event listener
+  sortedDesk.forEach((card) => {
+    const deskCard = document.createElement("div");
 
-      //deskCard.setAttribute("title", card.name);
-      deskCard.setAttribute("class", "card_" + amountOfCards);
-      deskCard.setAttribute("id", card.id);
-      deskMenu.appendChild(deskCard);
+    //deskCard.setAttribute("title", card.name);
+    deskCard.setAttribute("class", "card_" + amountOfCards);
+    deskCard.setAttribute("id", card.id);
+    deskMenu.appendChild(deskCard);
 
-      deskCard.addEventListener("click", () => {
+    deskCard.addEventListener("click", () => {
+      //starts timer
+      if (count === 0) {
+        let start = true;
+        startTimer(start);
+      }
 
-        //starts timer
-        startTimer(count);
-        if (deskCard.className === "card_" + amountOfCards) {
-
-          //count flip
-          countFlipping();
-          deskCard.setAttribute(
-            "style",
-            'background-image: url("' + card.url + '")'
-          );
-          deskCard.className =
-            "card_flipped_" +
-            amountOfCards +
-            " card_is-flipped card_changed-color card_not_faded";
-
-          //checking, if there are two cards opened
-          checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
-        } else if (
-          deskCard.className ===
+      if (deskCard.className === "card_" + amountOfCards) {
+        //count flip
+        countFlipping();
+        deskCard.setAttribute(
+          "style",
+          'background-image: url("' + card.url + '")'
+        );
+        deskCard.className =
           "card_flipped_" +
-            amountOfCards +
-            " card_is-flipped card_changed-color card_not_faded"
-        ) {
-          deskCard.removeAttribute("style");
-          deskCard.className =
-            "card_" + amountOfCards + " card_changed-color_2";
-          resetTheAmountOfCards();
-        } else if (
-          deskCard.className ===
-          "card_" + amountOfCards + " card_changed-color_2"
-        ) {
-          countFlipping();
-          deskCard.setAttribute(
-            "style",
-            'background-image: url("' + card.url + '");'
-          );
-          deskCard.className =
-            "card_flipped_" +
-            amountOfCards +
-            " card_is-flipped card_changed-color card_not_faded";
+          amountOfCards +
+          " card_is-flipped card_changed-color card_not_faded";
 
-          //checking, if there are two cards opened
-          checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
-        }
-      });
+        //checking, if there are two cards opened
+        checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
+      } else if (
+        deskCard.className ===
+        "card_flipped_" +
+          amountOfCards +
+          " card_is-flipped card_changed-color card_not_faded"
+      ) {
+        deskCard.removeAttribute("style");
+        deskCard.className = "card_" + amountOfCards + " card_changed-color_2";
+        resetTheAmountOfCards();
+      } else if (
+        deskCard.className ===
+        "card_" + amountOfCards + " card_changed-color_2"
+      ) {
+        countFlipping();
+        deskCard.setAttribute(
+          "style",
+          'background-image: url("' + card.url + '");'
+        );
+        deskCard.className =
+          "card_flipped_" +
+          amountOfCards +
+          " card_is-flipped card_changed-color card_not_faded";
+
+        //checking, if there are two cards opened
+        checkAmountOfCardsOpened(cardsOpened, deskCard, amountOfCards);
+      }
     });
   });
 }
 
 function resetTheAmountOfCards() {
   cardsOpened.length = 0;
-  console.log(cardsOpened);
 }
 
 //checking amount of cards, that were opened
@@ -132,7 +129,6 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
   if (cardsOpened.length === 1) {
     cardsOpened.push(cardOnDesk.id);
     setTimeout(function () {
-
       //checking, if these two cards are same
       if (cardsOpened[0] === cardsOpened[1]) {
         if (amountOfCardsOnTheDesk > 2) {
@@ -141,7 +137,6 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
           endGame();
         }
         cardsOpened.length = 0;
-        console.log(cardsOpened);
         const deskCardsToRemove = document.querySelectorAll(
           ".card_flipped_" + amountOfCards
         );
@@ -153,7 +148,6 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
         });
       } else {
         cardsOpened.length = 0;
-        console.log(cardsOpened);
         const deskCardsToHide = document.querySelectorAll(
           ".card_flipped_" + amountOfCards
         );
@@ -163,15 +157,12 @@ function checkAmountOfCardsOpened(cardsOpened, cardOnDesk, amountOfCards) {
         });
       }
     }, 1000);
-    console.log(cardsOpened);
   } else {
     cardsOpened.push(cardOnDesk.id);
-    console.log(cardsOpened);
   }
 }
 
 function pushingCardsToDesk(amountOfCards, cards) {
-
   //pushing some amount of cards to desk-array and doubling them (that's why I'm pushing this cards two times)
   for (let i = 0; i < amountOfCards; i++) {
     desk.push(cards[i]);
@@ -179,35 +170,28 @@ function pushingCardsToDesk(amountOfCards, cards) {
   }
 }
 
-function startTimer(count) {
-  
-  //starting timer
-  if (count === 0) {
-    const timerForSeconds = setInterval(function () {
-      if (seconds > 58) {
-        seconds = 0;
-        timerSeconds.innerText = "00";
-      } else if (seconds < 9) {
+function startTimer(start) {
+  if (start) {
+    timer = setInterval(() => {
+      if (seconds < 9) {
         seconds++;
         timerSeconds.innerText = "0" + seconds;
-      } else {
+      } else if (seconds < 59) {
         seconds++;
         timerSeconds.innerText = seconds;
-      }
-    }, 1000);
-    const timerForMinutes = setInterval(function () {
-      if (minutes < 9) {
+      } else if (seconds === 59) {
+        seconds = 0;
         minutes++;
+        timerSeconds.innerText = "00";
+      }
+      if (minutes < 9) {
         timerMinutes.innerText = "0" + minutes;
       } else {
-        minutes++;
         timerMinutes.innerText = minutes;
       }
-    }, 60000);
-    if (amountOfCardsOnTheDesk <= 0) {
-      clearInterval(timerForMinutes);
-      clearInterval(timerForSeconds);
-    }
+    }, 1000);
+  } else {
+    clearInterval(timer);
   }
 }
 
@@ -232,6 +216,10 @@ function restartingGame() {
   countText.innerText = count;
   seconds = 0;
   minutes = 0;
+  timerMinutes.innerText = "00";
+  timerSeconds.innerText = "00";
+  start = false;
+  startTimer(start);
   endingMenu.setAttribute("style", "display: none;");
   startingMenu.removeAttribute("style");
   countContainer.setAttribute("style", "display: none;");

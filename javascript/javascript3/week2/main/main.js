@@ -12,6 +12,7 @@ const countContainer = document.getElementById("count_container");
 countContainer.setAttribute("style", "display: none;");
 
 //timer
+let timer = null;
 let seconds = 0;
 let minutes = 0;
 
