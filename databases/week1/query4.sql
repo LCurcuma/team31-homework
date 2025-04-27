@@ -2,4 +2,6 @@ USE lesson1;
 
 SELECT *
 FROM task
-WHERE NOT status_id = 3
+JOIN status
+ON status.id = task.status_id
+WHERE NOT status.name = 'done';
