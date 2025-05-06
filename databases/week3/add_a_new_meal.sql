@@ -1,0 +1,1 @@
+INSERT INTO meal (id, title, description, location, `when`, max_reservations, price, created_date) VALUES (1, "Salad", "It contains vegetables, such as cucumbers, tomatoes, onions etc.", "Denmark", '2025-05-20 19:00:00', 156, 20.00, '2025-05-06')

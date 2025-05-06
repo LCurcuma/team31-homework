@@ -1,0 +1,2 @@
+SELECT * FROM meal
+WHERE created_date BETWEEN '2020-01-01' AND '2030-01-01'
