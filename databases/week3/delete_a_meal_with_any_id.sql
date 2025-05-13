@@ -1,0 +1,1 @@
+DELETE FROM meal WHERE id = 1
