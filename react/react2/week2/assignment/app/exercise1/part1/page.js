@@ -55,7 +55,7 @@ export function PageComponent() {
 export default function Page(){
     return(
         <ThemeProvider>
-            <PageComponent></PageComponent>
+            <PageComponent/>
         </ThemeProvider>
     )
 }
