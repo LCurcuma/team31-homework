@@ -1,0 +1,222 @@
+there're commands and the result of logs for part2:
+commands go after "-"
+result of "git log --oneline" and "git status" after "->"
+after creating the reset_playground folder:
+- git init
+after creating countries.txt
+- git add countries.txt
+- git commit -m "Added countries.txt"
+- git log --oneline
+ -> 4a3409d (HEAD -> master) Added countries.txt
+ after adding one country in file
+ - git status
+ -> On branch master
+ -> Changes not staged for commit: 
+ -> (use "git add <file>..." to update what will be committed)
+ -> (use "git restore <file>..." to discard changes in working directory)
+ -> modified: countries.txt
+ -> no changes added to commit (use "git add" and/or "git commit -a")
+ - git add countries.txt
+ - git status
+ -> On branch master
+ -> Changes to be committed:
+ -> (use "git restore --staged <file>..." to unstage)
+ -> modified: countries.txt
+ - git commit -m "added one country"
+ -git log --oneline
+ -> 8316e21 (HEAD -> master) added one country
+ -> 4a3409d Added country.txt
+ after adding second country
+ - git add countries.txt
+ - git commit -m "Added second country"
+ after adding third country
+ - git add countries.txt
+ - git commit -m "Added third country"
+ after adding forth country
+ - git add countries.txt
+ - git commit -m "Added forth country"
+ after adding fifth country
+ - git add countries.txt
+ - git commit -m "Added fifth country"
+ - git log --oneline
+ -> 1965168 (HEAD -> master) Added fifth country
+ -> 96bac3a Added forth country
+ -> 146fb7c Added third country
+ -> 1ab7cd5 Added second country
+ -> 8316e21 added one country
+ -> 4a3409d Added countries.txt
+ - git checkout -b feature/more_countries
+ - git status
+ -> On branch feature/more_countries
+ -> nothing to commit, working tree clean
+ after creating more_countries.txt and adding two countries
+- git add more_countries.txt
+- git commit -m "Added more_countries.txt with two countries"
+- git log --oneline
+-> 651a9ab (HEAD -> feature/more_countries) Added more_countries.txt with two countries
+-> 1965168 (master) Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git switch master
+- git log --oneline
+-> 1965168 (HEAD -> master) Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git cherry-pick 651a9ab
+- git log --oneline
+-> f3621b5 (HEAD -> master) Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+after adding one country to countries.txt
+- git add countries.txt
+- git commit -m "Added one country to countries.txt"
+- git log --oneline
+-> 93bf30c (HEAD -> master) Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries.txt
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+after adding one country 
+- git add countries.txt
+- git commit -m "Added country to countries.txt"
+- git log --oneline
+-> 3461699 (HEAD -> master) Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git reset --soft 3461699
+- git log --oneline
+-> 3461699 (HEAD -> master) Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+after adding country
+- git add countries.txt
+- git commit -m "Added country to countries.txt"
+- git log --oneline
+-> dced3b9 (HEAD -> master) Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git revert f3621b5
+- git rm more_countries.txt
+- git log --oneline
+-> ba5cb55 (HEAD -> master) deleted more_countries.txt
+-> dced3b9 Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git reset --mixed ba5cb55
+- git log --oneline
+-> dced3b9 (HEAD -> master) Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git add more_countries.txt
+- git commit -m "added more_countries.txt"
+- git log --oneline
+-> 93c7881 (HEAD -> master) added more_countries.txt
+-> dced3b9 Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git checkout 4a3409d
+-> Note: switching to '4a3409d'.
+-> 
+-> You are in 'detached HEAD' state. You can look around, make experimental
+-> changes and commit them, and you can discard any commits you make in this
+-> state without impacting any branches by switching back to a branch.
+-> 
+-> If you want to create a new branch to retain commits you create, you may
+-> do so (now or later) by using -c with the switch command. Example:
+-> 
+->  git switch -c <new-branch-name>
+->
+-> Or undo this operation with:
+->
+->   git switch -
+-> 
+-> Turn off this advice by setting config variable advice.detachedHead to false
+->
+-> HEAD is now at 4a3409d Added countries.txt
+- git log --oneline
+-> 4a3409d (HEAD) Added countries.txt
+- git checkout master
+- git log --oneline
+-> 93c7881 (HEAD -> master) added more_countries.txt
+-> dced3b9 Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
+- git revert 146fb7c
+there's conflict:
+-> CONFLICT (content): Merge conflict in countries.txt
+-> error: could not revert 146fb7c... Added third country
+resolved conflict by keeping all cities in file
+- git log --oneline
+-> 66d6d7f (HEAD -> master, origin/master) last step
+-> c7b3268 Revert "Added third country"
+-> 93c7881 added more_countries.txt
+-> dced3b9 Added country to countries.txt
+-> 3461699 Added country to countries.txt
+-> 93bf30c Added one country to countries.txt
+-> f3621b5 Added more_countries.txt with two countries
+-> 1965168 Added fifth country
+-> 96bac3a Added forth country
+-> 146fb7c Added third country
+-> 1ab7cd5 Added second country
+-> 8316e21 added one country
+-> 4a3409d Added countries.txt
